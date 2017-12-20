@@ -6,13 +6,13 @@ $(document).ready(function(){
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
     
-    $.post("fetch.php",
+    $.post("http://192.168.43.149/www/fetch.php",
           {
             username:   email,
             password: password 
           },
           function(data){
-            
+            alert(data);
             $("#push-button").fadeOut();
             $("ons-progress-bar").show();
             
@@ -21,7 +21,7 @@ $(document).ready(function(){
               $("ons-progress-bar").hide();
 
               $("#push-button").show();
-              document.querySelector('#myNavigator').pushPage('page2.html', {data: {title: 'Page 2'}});
+              document.querySelector('#myNavigator').pushPage('vendeur.html', {data: {title: 'Page 2'}});
               ons.notification.alert('Congratulations!');
             }else{
             
