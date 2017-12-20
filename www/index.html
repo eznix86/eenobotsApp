@@ -43,6 +43,7 @@
                         </div> 
               </ons-page>
             </template>
+            
             <!--- VENDEUR -->
             <template id="vendeur.html">
               <ons-page id="vendeur">
@@ -50,22 +51,25 @@
                             <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
                               <ons-page>
                                 <ons-list>
-                                  <ons-list-item onclick="fn.load('home.html')" tappable>
-                                    Home
+                                  <ons-list-item onclick="fn.load('store.html')" tappable>
+                                    Store
+                                  </ons-list-item>
+                                  <ons-list-item onclick="fn.load('history.html')" tappable>
+                                    History
+                                  </ons-list-item>
+                                  <ons-list-item onclick="fn.load('chats.html')" tappable>
+                                    Chats
                                   </ons-list-item>
                                   <ons-list-item onclick="fn.load('settings.html')" tappable>
                                     Settings
                                   </ons-list-item>
-                                  <ons-list-item onclick="fn.load('about.html')" tappable>
-                                    About
-                                  </ons-list-item>
                                 </ons-list>
                               </ons-page>
                             </ons-splitter-side>
-                            <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+                            <ons-splitter-content id="content" page="store.html"></ons-splitter-content>
                           </ons-splitter>
                           
-                          <template id="home.html">
+                          <template id="store.html">
                             <ons-page>
                               <ons-toolbar>
                                 <div class="left">
@@ -74,7 +78,7 @@
                                   </ons-toolbar-button>
                                 </div>
                                 <div class="center">
-                                  Main
+                                  Store
                                 </div>
                               </ons-toolbar>
                               <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
@@ -83,7 +87,7 @@
                             </ons-page>
                           </template>
                           
-                          <template id="settings.html">
+                          <template id="history.html">
                             <ons-page>
                               <ons-toolbar>
                                 <div class="left">
@@ -92,13 +96,13 @@
                                   </ons-toolbar-button>
                                 </div>
                                 <div class="center">
-                                  Settings
+                                  History
                                 </div>
                               </ons-toolbar>
                             </ons-page>
                           </template>
                           
-                          <template id="about.html">
+                          <template id="chats.html">
                             <ons-page>
                               <ons-toolbar>
                                 <div class="left">
@@ -107,14 +111,121 @@
                                   </ons-toolbar-button>
                                 </div>
                                 <div class="center">
-                                  About
+                                  Chats
                                 </div>
                               </ons-toolbar>
+                              <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
+                                  Whoops! Under construction!
+                                </p>
                             </ons-page>
                           </template>
+
+                          <template id="settings.html">
+                              <ons-page>
+                                <ons-toolbar>
+                                  <div class="left">
+                                    <ons-toolbar-button onclick="fn.open()">
+                                      <ons-icon icon="md-menu"></ons-icon>
+                                    </ons-toolbar-button>
+                                  </div>
+                                  <div class="center">
+                                    Settings
+                                  </div>
+                                </ons-toolbar>
+                              </ons-page>
+                            </template>
               </ons-page>
             </template>
             <!-- CHAUFFEUR -->
+            <template id="chauffeur.html">
+              <ons-page  id="chauffeur" >
+
+                  <ons-page >
+                      <ons-toolbar>
+                        <div class="center">EENOBOTS</div>
+                      </ons-toolbar>
+                    
+                      <ons-tabbar swipeable position="auto">
+                        <ons-tab page="tab1.html" label="Notifications" icon="ion-home, material:md-home" badge="4" active>
+                        </ons-tab>
+                        <ons-tab page="tab2.html" label="" icon="md-face" active-icon="md-car">
+                        </ons-tab>
+                      </ons-tabbar>
+                    </ons-page>
+                    
+                    <template id="tab1.html">
+                      <ons-page id="Tab1">
+                          <ons-list>
+                              
+                                <ons-list-header>New</ons-list-header>
+                                <ons-list-item  modifier="chevron" tappable>
+                                  <div class="left">
+                                    <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
+                                    <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
+                                  </div>
+                                  <div class="center">
+                                    <span class="list-item__title">1km Away</span><span class="list-item__subtitle">10 mins ago</span>
+                                  </div>
+                                </ons-list-item>
+                            
+                                <ons-list-item  modifier="chevron" tappable>
+                                    <div class="left">
+                                      <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
+                                      <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
+                                    </div>
+                                    <div class="center">
+                                      <span class="list-item__title">1km Away</span><span class="list-item__subtitle">10 mins ago</span>
+                                    </div>
+                                  </ons-list-item>
+      
+                                <ons-list-item  modifier="chevron" tappable>
+                                    <div class="left">
+                                      <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
+                                      <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
+                                    </div>
+                                    <div class="center">
+                                      <span class="list-item__title">1km Away</span><span class="list-item__subtitle">10 mins ago</span>
+                                    </div>
+                                  </ons-list-item>
+      
+                                <ons-list-item  modifier="chevron" tappable>
+                                    <div class="left">
+                                      <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
+                                      <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
+                                    </div>
+                                    <div class="center">
+                                      <span class="list-item__title">1km Away</span><span class="list-item__subtitle">10 mins ago</span>
+                                    </div>
+                                  </ons-list-item>
+      
+                                <ons-list-header>History</ons-list-header>
+                                  <ons-list-item  modifier="chevron" tappable>
+                                    <div class="left">
+                                      <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
+                                      <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
+                                    </div>
+                                    <div class="center">
+                                      <span class="list-item__title">1km Away</span><span class="list-item__subtitle">10 mins ago</span>
+                                    </div>
+                                  </ons-list-item>
+                            
+                            
+                            
+                            
+                              </ons-list>
+                           
+                      </ons-page>
+                    </template>
+                    
+                    <template id="tab2.html">
+                      <ons-page id="Tab2">
+                        <p style="text-align: center;">
+                          This is the second page.
+                        </p>
+                      </ons-page>
+                    </template>
+              </ons-page>
+            </template>
 
             <!-- AGRICULTEUR -->
 

@@ -6,13 +6,12 @@ $(document).ready(function(){
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
     
-    $.post("http://192.168.43.149/www/fetch.php",
+    $.post("fetch.php",
           {
             username:   email,
             password: password 
           },
           function(data){
-            alert(data);
             $("#push-button").fadeOut();
             $("ons-progress-bar").show();
             
@@ -21,7 +20,7 @@ $(document).ready(function(){
               $("ons-progress-bar").hide();
 
               $("#push-button").show();
-              document.querySelector('#myNavigator').pushPage('vendeur.html', {data: {title: 'Page 2'}});
+              document.querySelector('#myNavigator').pushPage('chauffeur.html', {data: {title: 'Espace Client'}});
               ons.notification.alert('Congratulations!');
             }else{
             
