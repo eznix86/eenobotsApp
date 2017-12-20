@@ -1,33 +1,43 @@
-function login() {
-  var email = document.getElementById('email').value;
-  var password = document.getElementById('password').value;
 
-  if (email === 'bob' && password === 'secret') {
-    $(".next").html("<ons-progress-bar indeterminate></ons-progress-bar>");
-    
-    ons.notification.alert('Congratulations!');
-    return true;
-  }
-  else { 
-    ons.notification.alert('Incorrect username or password.');
-    return false;
-}};
-
-document.addEventListener('init', function(event) {
-var page = event.target;
-
-if (page.id === 'page1') {
+$(document).ready(function(){
+  $("ons-progress-bar").hide();
   
-  page.querySelector('#push-button').onclick = function() {
-    if (login() === true){
-      document.querySelector('#myNavigator').pushPage('page2.html', {data: {title: 'Page 2'}});
-     }};
-} else if (page.id === 'page2') {
-  page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
-}
+  $("#push-button").click(function(){
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+    
+    $.post("fetch.php",
+          {
+            username:   email,
+            password: password 
+          },
+          function(data){
+            
+            $("#push-button").fadeOut();
+            $("ons-progress-bar").show();
+            
+            if (data == "success"){
+              
+              $("ons-progress-bar").hide();
 
-
+              $("#push-button").show();
+              document.querySelector('#myNavigator').pushPage('page2.html', {data: {title: 'Page 2'}});
+              ons.notification.alert('Congratulations!');
+            }else{
+            
+              $("#push-button").fadeIn(1000);
+              $("ons-progress-bar").hide();
+              
+              ons.notification.alert('Incorrect username or password.');
+            }
+            
+          },
+          'text'
+  
+        );
+  })
 });
+
 
 window.fn = {};
 
@@ -42,3 +52,4 @@ var menu = document.getElementById('menu');
 content.load(page)
   .then(menu.close.bind(menu));
 };
+
