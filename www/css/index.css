@@ -11,12 +11,26 @@
     margin: 0;
     padding: 0;
 }
-.login-content{
+
+.content-center{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.login-content, .transaction{
     text-align: center; 
+}
+.transaction{
+    padding-top: 10%;
 }
 .login-content img {
     width: 150px; 
     padding-top: 5px;
+}
+.transaction-cancel{
+
+    padding-top: 15%;
 }
 .login-content h3 {
     color: #2979FF;

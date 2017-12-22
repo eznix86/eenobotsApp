@@ -142,8 +142,21 @@
 
                   <ons-page >
                       <ons-toolbar>
-                        <div class="center">EENOBOTS</div>
+                        <div class="center"><img src="img/logo-side-large.png" style="width: 98px;"></div>
+                        <div class="right" onclick="showPopover(this)" > <ons-icon icon="md-more-vert" style="margin-right: 20px;"    ></ons-icon></div>
                       </ons-toolbar>
+
+                    <ons-popover cancelable direction="down" id="popover">
+                            <ons-list onclick="hidePopover()" >
+                                <ons-list-item tappable>
+                                 Sign out
+                                </ons-list-item>
+                                <ons-list-item tappable>
+                                  About 
+                                  </ons-list-item>  
+                            </ons-list>
+                      </ons-popover>
+                    
                     
                       <ons-tabbar swipeable position="auto">
                         <ons-tab page="tab1.html" label="Notifications" icon="ion-home, material:md-home" badge="4" active>
@@ -152,7 +165,8 @@
                         </ons-tab>
                       </ons-tabbar>
                     </ons-page>
-                    
+
+
                     <template id="tab1.html">
                       <ons-page id="Tab1">
                           <ons-list>
@@ -219,18 +233,123 @@
                     
                     <template id="tab2.html">
                       <ons-page id="Tab2">
-                        <p style="text-align: center;">
-                          This is the second page.
-                        </p>
+                          
+                          <!--MAP-->
+                          <div id="map"  style="width:100%;height:300px;"></div>
+                          <script type="text/javascript" src="js/map.js"></script>
+                          <script async defer
+                          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjn7QCSvFuQci4bZOQj1kyZLWjweKkQOk&callback=initMap">
+                        </script>  
+                          <!--MAP END -->
+                          <!--ACTIONS -->
+                          <!--DESC -->
+                          <ons-list>
+                                <ons-list-header>Status</ons-list-header>
+                                <ons-list-item >
+                                  <div class="center" >
+                                      <ons-icon icon="md-info" style="color:green" > Available</ons-icon>
+                                  </div>
+                                </ons-list-item>
+
+                                <ons-list-header>Actions</ons-list-header>
+                                
+                                <ons-list-item  >
+                                  <div class="left">
+                                    <ons-button>Toggle</ons-button>
+                                  </div>
+                                  <div class="right">
+                                      <ons-button id="confirmation" onclick="confirmation()" >Validate Transaction</ons-button>
+                                  </div>
+                                </ons-list-item>
+
+                                <ons-list-header>Order Description</ons-list-header>
+                                <ons-list-item  >
+                                  <div class="left">
+                                    <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
+                                  </div>
+                                  <div class="center">
+                                    <span class="list-item__title">Lettuce</span><span class="list-item__subtitle">Amount: 10</span>
+                                  </div>
+                                </ons-list-item>
+                                
+                              <ons-list-item  >
+                                  <div class="left">
+                                    <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
+                                    </div>
+                                  <div class="center">
+                                    <span class="list-item__title">Beetroot</span><span class="list-item__subtitle">Amount: 1</span>
+                                  </div>
+                                </ons-list-item>
+                          </ons-list>
+                          <!-- end -->
                       </ons-page>
                     </template>
               </ons-page>
             </template>
 
+
+                          <!-- confirmation >
+            <template id="confirmation.html">
+                <ons-page id="confirmation">
+                  <ons-toolbar>
+                    <div class="left"><ons-back-button>Page 1</ons-back-button>Payment Validation</div>
+                  </ons-toolbar>
+                  <div >
+                    <p class="center">
+                      Transaction code:  
+                    </p>  
+                  </div>
+                </ons-page>
+              </template>
+            < end confirmation -->
+            <template id="confirmation.html">
+                <ons-page id="confirmation">
+                
+                    <ons-toolbar>
+                        <div class="left"><ons-back-button>Page 1</ons-back-button>Payment Validation</div>
+                      </ons-toolbar>
+                              <div class="transaction" >
+                                <h3 >
+                                  Transaction code:
+                                </h3 >
+                                <p >
+                                    <ons-input id="transaction_code" modifier="underbar" type="transaction_code" placeholder="Code" float></ons-input>
+                                </p>
+                                <p >
+                                    <ons-button>Validate</ons-button>
+                                    
+                                    <ons-button class="cancel_transaction"  >Cancel Transaction</ons-button>
+                                    
+                                </p>
+                            
+                              </div> 
+                </ons-page>
+              </template>
+
+
+          <template id="tranction_cancel.html">
+              <ons-dialog id="tc">
+                <div style="text-align: center; padding: 10px;">
+                  <p>
+                    Do you still want to cancel this transaction ?
+                    Note: By cancelling this transaction, you might lose this order
+                    <p>
+            
+                      <p>
+
+                        <ons-button onclick="hideDialog('tc')">Yes</ons-button>
+                        <ons-button onclick="hideDialog('tc')">No</ons-button>
+                      </p>
+                </div>
+              </ons-dialog>
+            </template>
+              
             <!-- AGRICULTEUR -->
 
                     
         <!--script type="text/javascript" src="cordova.js"></script-->
         <script type="text/javascript" src="js/index.js"></script>
+        
+        
     </body>
 </html>

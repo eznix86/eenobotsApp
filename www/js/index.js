@@ -34,8 +34,27 @@ $(document).ready(function(){
           'text'
   
         );
-  })
+  });
+  
 });
+
+
+function confirmation(){
+  document.querySelector('#myNavigator').pushPage('confirmation.html', {data: {title: 'Espace Client'}});
+  
+}
+
+var showPopover = function(target) {
+  document
+    .getElementById('popover')
+    .show(target);
+};
+
+var hidePopover = function() {
+  document
+    .getElementById('popover')
+    .hide();
+};
 
 
 window.fn = {};
