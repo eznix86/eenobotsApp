@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      
+
         <meta name="format-detection" content="telephone=no">
         <meta charset="utf-8">
         <meta name="msapplication-tap-highlight" content="no">
@@ -20,11 +20,11 @@
     <body>
           <!-- Open page from navigator -->
             <ons-navigator animation="lift-md" id="myNavigator" page="login.html"></ons-navigator>
-          <!-- LOGIN -->  
+          <!-- LOGIN -->
             <template id="login.html">
               <ons-page id="login">
                     <div class="login-page">
-                            
+
                             <div class="login-content" >
                             <img src="img/logo-title.png">
                             <h3>Sign in</h3>
@@ -39,11 +39,11 @@
                                 <ons-progress-bar indeterminate></ons-progress-bar>
                             </p>
                             </div>
-                        
-                        </div> 
+
+                        </div>
               </ons-page>
             </template>
-            
+
             <!--- VENDEUR -->
             <template id="vendeur.html">
               <ons-page id="vendeur">
@@ -68,7 +68,7 @@
                             </ons-splitter-side>
                             <ons-splitter-content id="content" page="store.html"></ons-splitter-content>
                           </ons-splitter>
-                          
+
                           <template id="store.html">
                             <ons-page>
                               <ons-toolbar>
@@ -86,7 +86,7 @@
                               </p>
                             </ons-page>
                           </template>
-                          
+
                           <template id="history.html">
                             <ons-page>
                               <ons-toolbar>
@@ -101,7 +101,7 @@
                               </ons-toolbar>
                             </ons-page>
                           </template>
-                          
+
                           <template id="chats.html">
                             <ons-page>
                               <ons-toolbar>
@@ -152,12 +152,12 @@
                                  Sign out
                                 </ons-list-item>
                                 <ons-list-item tappable>
-                                  About 
-                                  </ons-list-item>  
+                                  About
+                                  </ons-list-item>
                             </ons-list>
                       </ons-popover>
-                    
-                    
+
+
                       <ons-tabbar swipeable position="auto">
                         <ons-tab page="tab1.html" label="Notifications" icon="ion-home, material:md-home" badge="4" active>
                         </ons-tab>
@@ -170,7 +170,7 @@
                     <template id="tab1.html">
                       <ons-page id="Tab1">
                           <ons-list>
-                              
+
                                 <ons-list-header>New</ons-list-header>
                                 <ons-list-item  modifier="chevron" tappable>
                                   <div class="left">
@@ -181,7 +181,7 @@
                                     <span class="list-item__title">1km Away</span><span class="list-item__subtitle">10 mins ago</span>
                                   </div>
                                 </ons-list-item>
-                            
+
                                 <ons-list-item  modifier="chevron" tappable>
                                     <div class="left">
                                       <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
@@ -191,7 +191,7 @@
                                       <span class="list-item__title">1km Away</span><span class="list-item__subtitle">10 mins ago</span>
                                     </div>
                                   </ons-list-item>
-      
+
                                 <ons-list-item  modifier="chevron" tappable>
                                     <div class="left">
                                       <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
@@ -201,7 +201,7 @@
                                       <span class="list-item__title">1km Away</span><span class="list-item__subtitle">10 mins ago</span>
                                     </div>
                                   </ons-list-item>
-      
+
                                 <ons-list-item  modifier="chevron" tappable>
                                     <div class="left">
                                       <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
@@ -211,7 +211,7 @@
                                       <span class="list-item__title">1km Away</span><span class="list-item__subtitle">10 mins ago</span>
                                     </div>
                                   </ons-list-item>
-      
+
                                 <ons-list-header>History</ons-list-header>
                                   <ons-list-item  modifier="chevron" tappable>
                                     <div class="left">
@@ -222,24 +222,24 @@
                                       <span class="list-item__title">1km Away</span><span class="list-item__subtitle">10 mins ago</span>
                                     </div>
                                   </ons-list-item>
-                            
-                            
-                            
-                            
+
+
+
+
                               </ons-list>
-                           
+
                       </ons-page>
                     </template>
-                    
+
                     <template id="tab2.html">
                       <ons-page id="Tab2">
-                          
+
                           <!--MAP-->
                           <div id="map"  style="width:100%;height:300px;"></div>
                           <script type="text/javascript" src="js/map.js"></script>
                           <script async defer
                           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjn7QCSvFuQci4bZOQj1kyZLWjweKkQOk&callback=initMap">
-                        </script>  
+                        </script>
                           <!--MAP END -->
                           <!--ACTIONS -->
                           <!--DESC -->
@@ -252,7 +252,7 @@
                                 </ons-list-item>
 
                                 <ons-list-header>Actions</ons-list-header>
-                                
+
                                 <ons-list-item  >
                                   <div class="left">
                                     <ons-button>Toggle</ons-button>
@@ -271,7 +271,7 @@
                                     <span class="list-item__title">Lettuce</span><span class="list-item__subtitle">Amount: 10</span>
                                   </div>
                                 </ons-list-item>
-                                
+
                               <ons-list-item  >
                                   <div class="left">
                                     <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
@@ -288,68 +288,58 @@
             </template>
 
 
-                          <!-- confirmation >
-            <template id="confirmation.html">
-                <ons-page id="confirmation">
-                  <ons-toolbar>
-                    <div class="left"><ons-back-button>Page 1</ons-back-button>Payment Validation</div>
-                  </ons-toolbar>
-                  <div >
-                    <p class="center">
-                      Transaction code:  
-                    </p>  
-                  </div>
-                </ons-page>
-              </template>
-            < end confirmation -->
-            <template id="confirmation.html">
-                <ons-page id="confirmation">
-                
-                    <ons-toolbar>
-                        <div class="left"><ons-back-button>Page 1</ons-back-button>Payment Validation</div>
-                      </ons-toolbar>
-                              <div class="transaction" >
-                                <h3 >
-                                  Transaction code:
-                                </h3 >
-                                <p >
-                                    <ons-input id="transaction_code" modifier="underbar" type="transaction_code" placeholder="Code" float></ons-input>
-                                </p>
-                                <p >
-                                    <ons-button>Validate</ons-button>
-                                    
-                                    <ons-button class="cancel_transaction"  >Cancel Transaction</ons-button>
-                                    
-                                </p>
-                            
-                              </div> 
-                </ons-page>
-              </template>
+                          <!-- confirmation -->
+                          <template id="confirmation.html">
+                              <ons-page id="confirmation">
+
+                                  <ons-toolbar>
+                                      <div class="left"><ons-back-button>Page 1</ons-back-button>Payment Validation</div>
+                                    </ons-toolbar>
+                                            <div class="transaction" >
+                                              <h3 >
+                                                Transaction code:
+                                              </h3 >
+                                              <p >
+                                                  <ons-input id="transaction_code" modifier="underbar" type="transaction_code" placeholder="Code" float></ons-input>
+                                              </p>
+                                              <p >
+                                                  <ons-button>Validate</ons-button>
+
+                                                  <ons-button class="cancel_transaction" tappable onclick="fromTemplate()"  >Cancel Transaction</ons-button>
+
+                                              </p>
+
+                                            </div>
+                              </ons-page>
+                            </template>
 
 
-          <template id="tranction_cancel.html">
-              <ons-dialog id="tc">
-                <div style="text-align: center; padding: 10px;">
-                  <p>
-                    Do you still want to cancel this transaction ?
-                    Note: By cancelling this transaction, you might lose this order
-                    <p>
-            
+            <!-- end confirmation -->
+
+              <template id="dialog.html">
+                  <ons-dialog id="dialog-3">
+                    <div style="text-align: center; padding: 10px;">
                       <p>
+                          Do you still want to cancel this transaction ?
+                        <p>
+                        <p>
+                        Note: By cancelling this transaction, you might lose this order
 
-                        <ons-button onclick="hideDialog('tc')">Yes</ons-button>
-                        <ons-button onclick="hideDialog('tc')">No</ons-button>
-                      </p>
-                </div>
-              </ons-dialog>
-            </template>
-              
+                        </p>
+                          <p>
+                            <ons-button onclick="hideDialog('dialog-3')">Yes</ons-button>
+                            <ons-button onclick="hideDialog('dialog-3')">No</ons-button>
+                          </p>
+                    </div>
+                  </ons-dialog>
+                </template>
             <!-- AGRICULTEUR -->
 
-                    
+
+
         <!--script type="text/javascript" src="cordova.js"></script-->
         <script type="text/javascript" src="js/index.js"></script>
-        
-        
+
+
     </body>
 </html>
