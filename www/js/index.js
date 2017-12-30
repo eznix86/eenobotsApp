@@ -38,10 +38,33 @@ $(document).ready(function(){
 
 });
 
+function toggle_search(){
+
+  $(".over-search").toggle();
+
+}
 
 function confirmation(){
   document.querySelector('#myNavigator').pushPage('confirmation.html', {data: {title: 'Espace Client'}});
 
+}
+
+
+function cart(){
+  document.querySelector('#myNavigator').pushPage('cart.html', {data: {title: 'Espace Client'}});
+}
+
+
+function cart_validation(){
+  document.querySelector('#myNavigator').pushPage('cart-validation.html', {data: {title: 'Espace Client'}});
+}
+
+function ordering(){
+  document.querySelector('#myNavigator').pushPage('ordering.html', {data: {title: 'Espace Client'}});
+}
+
+function order_details(){
+  document.querySelector('#myNavigator').pushPage('order-details.html', {data: {title: 'Espace Client'}});
 }
 
 window.fn = {};
@@ -80,6 +103,19 @@ var fromTemplate = function () {
   }
   else {
     ons.createDialog('dialog.html')
+      .then(function (dialog) {
+        dialog.show();
+      });
+  }
+};
+var cancel_order = function () {
+  var dialog = document.getElementById('cancel-order');
+
+  if (dialog) {
+    dialog.show();
+  }
+  else {
+    ons.createDialog('cancel-order.html')
       .then(function (dialog) {
         dialog.show();
       });
