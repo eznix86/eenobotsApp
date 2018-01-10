@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
    <head>
@@ -50,352 +52,281 @@
                   Cart
                </div>
                <div class="right">
-                    <ons-button onclick="cart_validation()" style="margin-right: 10px;">CHECK OUT</ons-button>
+                  <ons-button onclick="cart_validation()" style="margin-right: 10px;">CHECK OUT</ons-button>
                </div>
             </ons-toolbar>
             <ons-list>
-            <ons-list-header>Orders</ons-list-header>
-            <ons-list-item>
-              <div class="left">
-                <img class="list-item__thumbnail" src="img/lettuce.jpg">
-              </div>
-              <div class="center">
-                <span class="list-item__title">Lettuce</span><span class="list-item__subtitle">Amount: 10</span>
-              </div>
-              <div class="right">
-                <ons-button>Remove</ons-button>
-              </div>
-            </ons-list-item>
-
-            <ons-list-item>
-                    <div class="left">
-                      <img class="list-item__thumbnail" src="img/lettuce.jpg">
-                    </div>
-                    <div class="center">
-                      <span class="list-item__title">Lettuce</span><span class="list-item__subtitle">Amount: 10</span>
-                    </div>
-                    <div class="right">
-                      <ons-button>Remove</ons-button>
-                    </div>
-                  </ons-list-item>
-
-            <ons-list-item>
-                    <div class="left">
-                      <img class="list-item__thumbnail" src="img/lettuce.jpg">
-                    </div>
-                    <div class="center">
-                      <span class="list-item__title">Lettuce</span><span class="list-item__subtitle">Amount: 10</span>
-                    </div>
-                    <div class="right">
-                      <ons-button>Remove</ons-button>
-                    </div>
-                  </ons-list-item>
-
-            <ons-list-item>
-                    <div class="left">
-                      <img class="list-item__thumbnail" src="img/lettuce.jpg">
-                    </div>
-                    <div class="center">
-                      <span class="list-item__title">Lettuce</span><span class="list-item__subtitle">Amount: 10</span>
-                    </div>
-                    <div class="right">
-                      <ons-button>Remove</ons-button>
-                    </div>
-                  </ons-list-item>
-        </ons-list>
+               <ons-list-header>Orders</ons-list-header>
+               <ons-list-item>
+                  <div class="left">
+                     <img class="list-item__thumbnail" src="img/lettuce.jpg">
+                  </div>
+                  <div class="center">
+                     <span class="list-item__title">Lettuce</span><span class="list-item__subtitle">Amount: 10</span>
+                  </div>
+                  <div class="right">
+                     <ons-button>Remove</ons-button>
+                  </div>
+               </ons-list-item>
+               <ons-list-item>
+                  <div class="left">
+                     <img class="list-item__thumbnail" src="img/lettuce.jpg">
+                  </div>
+                  <div class="center">
+                     <span class="list-item__title">Lettuce</span><span class="list-item__subtitle">Amount: 10</span>
+                  </div>
+                  <div class="right">
+                     <ons-button>Remove</ons-button>
+                  </div>
+               </ons-list-item>
+               <ons-list-item>
+                  <div class="left">
+                     <img class="list-item__thumbnail" src="img/lettuce.jpg">
+                  </div>
+                  <div class="center">
+                     <span class="list-item__title">Lettuce</span><span class="list-item__subtitle">Amount: 10</span>
+                  </div>
+                  <div class="right">
+                     <ons-button>Remove</ons-button>
+                  </div>
+               </ons-list-item>
+               <ons-list-item>
+                  <div class="left">
+                     <img class="list-item__thumbnail" src="img/lettuce.jpg">
+                  </div>
+                  <div class="center">
+                     <span class="list-item__title">Lettuce</span><span class="list-item__subtitle">Amount: 10</span>
+                  </div>
+                  <div class="right">
+                     <ons-button>Remove</ons-button>
+                  </div>
+               </ons-list-item>
+            </ons-list>
          </ons-page>
       </template>
-
       <!--cart-validation -->
       <template id="cart-validation.html">
-            <ons-page id="cart-validation">
-               <ons-toolbar>
-                  <div class="left">
-                     <ons-back-button>Cart</ons-back-button>
-                     Order information
-                  </div>
-               </ons-toolbar>
-
-
-                  <ons-list>
-                      <ons-list-header>Fill in some comments (optional)</ons-list-header>
-                    <textarea style="resize: none; width: 100%;" ></textarea>
-
-                    <ons-list-header>Farmers options</ons-list-header>
-                    <ons-list-item tappable>
-                      <label class="left">
-                        <ons-radio name="farmers" input-id="radio-1" checked></ons-radio>
-                      </label>
-                      <label for="radio-1" class="center">
-                        Recent farmers
-                      </label>
-
-                    </ons-list-item>
-                    <select multiple class="form-control" id="sel2" disabled>
-                            <option>Mr x</option>
-                            <option>Mr y</option>
-                            <option>Mr z</option>
-                          </select>
-                    <ons-list-item tappable>
-                      <label class="left">
-                        <ons-radio name="farmers" input-id="radio-2"></ons-radio>
-                      </label>
-                      <label for="radio-2" class="center">
-                        Anyone
-                      </label>
-                    </ons-list-item>
-                    <ons-list-item class="credit-card" >
-                        <ons-list-header>Payment information</ons-list-header>
-                        <img src="img/cards.png" style="width: 100%;">
-                        <p style="text-align: center;">
-                        <ons-input
+         <ons-page id="cart-validation">
+            <ons-toolbar>
+               <div class="left">
+                  <ons-back-button>Cart</ons-back-button>
+                  Order information
+               </div>
+            </ons-toolbar>
+            <ons-list>
+               <ons-list-header>Fill in some comments (optional)</ons-list-header>
+               <textarea style="resize: none; width: 100%;" ></textarea>
+               <ons-list-header>Farmers options</ons-list-header>
+               <ons-list-item tappable>
+                  <label class="left">
+                     <ons-radio name="farmers" input-id="radio-1" checked></ons-radio>
+                  </label>
+                  <label for="radio-1" class="center">
+                  Recent farmers
+                  </label>
+               </ons-list-item>
+               <select multiple class="form-control" id="sel2" disabled>
+                  <option>Mr x</option>
+                  <option>Mr y</option>
+                  <option>Mr z</option>
+               </select>
+               <ons-list-item tappable>
+                  <label class="left">
+                     <ons-radio name="farmers" input-id="radio-2"></ons-radio>
+                  </label>
+                  <label for="radio-2" class="center">
+                  Anyone
+                  </label>
+               </ons-list-item>
+               <ons-list-item class="credit-card" >
+                  <ons-list-header>Payment information</ons-list-header>
+                  <img src="img/cards.png" style="width: 100%;">
+                  <p style="text-align: center;">
+                     <ons-input
                         placeholder="First Name"
                         >
-
-                        </ons-input>
-                        <ons-input
+                     </ons-input>
+                     <ons-input
                         placeholder="Last Name">
-
-                        </ons-input>
-                        <ons-input
+                     </ons-input>
+                     <ons-input
                         placeholder="Credit Card Number">
-
-                        </ons-input>
-
-
-                        <ons-input placeholder="Expiration Month (in numbers) e.g 1 for Jan">
-
-                        </ons-input>
-
-
-                        <ons-input
+                     </ons-input>
+                     <ons-input placeholder="Expiration Month (in numbers) e.g 1 for Jan">
+                     </ons-input>
+                     <ons-input
                         placeholder="Year in Numbers e.g 2091">
-
-                        </ons-input>
-
-                        <ons-input
+                     </ons-input>
+                     <ons-input
                         placeholder="3-digits code">
-
-                        </ons-input>
-                        </p>
-                        <ons-button onclick="ordering()" >Validate &gt;</ons-button>
-
-
-                    </ons-list-item>
-                  </ons-list>
-
-            </ons-page>
-         </template>
-
-
+                     </ons-input>
+                  </p>
+                  <ons-button onclick="ordering()" >Validate &gt;</ons-button>
+               </ons-list-item>
+            </ons-list>
+         </ons-page>
+      </template>
       <!--cart-validation -->
       <template id="cart-validation.html">
-            <ons-page id="cart-validation">
-               <ons-toolbar>
-                  <div class="left">
-                     <ons-back-button>Cart</ons-back-button>
-                     Order information
-                  </div>
-               </ons-toolbar>
-
-
-                  <ons-list>
-                      <ons-list-header>Fill in some comments (optional)</ons-list-header>
-                    <textarea style="resize: none; width: 100%;" ></textarea>
-
-                    <ons-list-header>Farmers options</ons-list-header>
-                    <ons-list-item tappable>
-                      <label class="left">
-                        <ons-radio name="farmers" input-id="radio-1" checked></ons-radio>
-                      </label>
-                      <label for="radio-1" class="center">
-                        Recent farmers
-                      </label>
-
-                    </ons-list-item>
-                    <select multiple class="form-control" id="sel2" disabled>
-                            <option>Mr x</option>
-                            <option>Mr y</option>
-                            <option>Mr z</option>
-                          </select>
-                    <ons-list-item tappable>
-                      <label class="left">
-                        <ons-radio name="farmers" input-id="radio-2"></ons-radio>
-                      </label>
-                      <label for="radio-2" class="center">
-                        Anyone
-                      </label>
-                    </ons-list-item>
-                    <ons-list-item class="credit-card" >
-                        <ons-list-header>Payment information</ons-list-header>
-                        <img src="img/cards.png" style="width: 100%;">
-                        <p style="text-align: center;">
-                        <ons-input
+         <ons-page id="cart-validation">
+            <ons-toolbar>
+               <div class="left">
+                  <ons-back-button>Cart</ons-back-button>
+                  Order information
+               </div>
+            </ons-toolbar>
+            <ons-list>
+               <ons-list-header>Fill in some comments (optional)</ons-list-header>
+               <textarea style="resize: none; width: 100%;" ></textarea>
+               <ons-list-header>Farmers options</ons-list-header>
+               <ons-list-item tappable>
+                  <label class="left">
+                     <ons-radio name="farmers" input-id="radio-1" checked></ons-radio>
+                  </label>
+                  <label for="radio-1" class="center">
+                  Recent farmers
+                  </label>
+               </ons-list-item>
+               <select multiple class="form-control" id="sel2" disabled>
+                  <option>Mr x</option>
+                  <option>Mr y</option>
+                  <option>Mr z</option>
+               </select>
+               <ons-list-item tappable>
+                  <label class="left">
+                     <ons-radio name="farmers" input-id="radio-2"></ons-radio>
+                  </label>
+                  <label for="radio-2" class="center">
+                  Anyone
+                  </label>
+               </ons-list-item>
+               <ons-list-item class="credit-card" >
+                  <ons-list-header>Payment information</ons-list-header>
+                  <img src="img/cards.png" style="width: 100%;">
+                  <p style="text-align: center;">
+                     <ons-input
                         placeholder="First Name"
                         >
-
-                        </ons-input>
-                        <ons-input
+                     </ons-input>
+                     <ons-input
                         placeholder="Last Name">
-
-                        </ons-input>
-                        <ons-input
+                     </ons-input>
+                     <ons-input
                         placeholder="Credit Card Number">
-
-                        </ons-input>
-
-
-                        <ons-input placeholder="Expiration Month (in numbers) e.g 1 for Jan">
-
-                        </ons-input>
-
-
-                        <ons-input
+                     </ons-input>
+                     <ons-input placeholder="Expiration Month (in numbers) e.g 1 for Jan">
+                     </ons-input>
+                     <ons-input
                         placeholder="Year in Numbers e.g 2091">
-
-                        </ons-input>
-
-                        <ons-input
+                     </ons-input>
+                     <ons-input
                         placeholder="3-digits code">
-
-                        </ons-input>
-                        </p>
-                        <ons-button onclick="ordering()" >Validate &gt;</ons-button>
-
-
-                    </ons-list-item>
-                  </ons-list>
-
-            </ons-page>
-         </template>
-
-
-
+                     </ons-input>
+                  </p>
+                  <ons-button onclick="ordering()" >Validate &gt;</ons-button>
+               </ons-list-item>
+            </ons-list>
+         </ons-page>
+      </template>
       <!--ordering -->
       <template id="ordering.html">
-            <ons-page id="ordering">
-               <ons-toolbar>
-                  <div class="left">
-                     <ons-back-button>Order</ons-back-button>
-                     Order information
+         <ons-page id="ordering">
+            <ons-toolbar>
+               <div class="left">
+                  <ons-back-button>Order</ons-back-button>
+                  Order information
+               </div>
+            </ons-toolbar>
+            <ons-list>
+               <ons-list-header>Order code:</ons-list-header>
+               <h3 style="text-align: center;" >0450</h3>
+               <ons-list-header>Status</ons-list-header>
+               <ons-list-item >
+                  <div class="center" >
+                     <ons-icon icon="md-info" style="color:orange" > Pending</ons-icon>
                   </div>
-               </ons-toolbar>
-
-
-                  <ons-list>
-                      <ons-list-header>Order code:</ons-list-header>
-                        <h3 style="text-align: center;" >0450</h3>
-
-                    <ons-list-header>Status</ons-list-header>
-                    <ons-list-item >
-
-                    <div class="center" >
-                        <ons-icon icon="md-info" style="color:orange" > Pending</ons-icon>
-                    </div>
-                    </ons-list-item>
-
-                    <ons-list-header>Farmer information</ons-list-header>
-                    <p style="text-align: center; opacity: 0.6;" >Order not validated yet</p>
-                    <ons-list-header>Driver information</ons-list-header>
-                    <p style="text-align: center; opacity: 0.6;"> No Driver</p>
-                    <ons-list-header>Options</ons-list-header>
-                    <ons-list-item>
-                        <div style="text-align: center;" class="left">
-                        <ons-button onclick="cancel_order()">Cancel Order</ons-button>
-
-                        </div>
-                        <div class="right">
-                                <ons-button onclick="order_details()">Order details</ons-button>
-
-                        </div>
-                    </ons-list-item>
-
-                    <ons-list-header>Additional information</ons-list-header>
-                    <p style="text-align: center; opacity: 0.6;">This order details can be found in your history</p>
-                  </ons-list>
-
-            </ons-page>
-         </template>
-
+               </ons-list-item>
+               <ons-list-header>Farmer information</ons-list-header>
+               <p style="text-align: center; opacity: 0.6;" >Order not validated yet</p>
+               <ons-list-header>Driver information</ons-list-header>
+               <p style="text-align: center; opacity: 0.6;"> No Driver</p>
+               <ons-list-header>Options</ons-list-header>
+               <ons-list-item>
+                  <div style="text-align: center;" class="left">
+                     <ons-button onclick="cancel_order()">Cancel Order</ons-button>
+                  </div>
+                  <div class="right">
+                     <ons-button onclick="order_details()">Order details</ons-button>
+                  </div>
+               </ons-list-item>
+               <ons-list-header>Additional information</ons-list-header>
+               <p style="text-align: center; opacity: 0.6;">This order details can be found in your history</p>
+            </ons-list>
+         </ons-page>
+      </template>
       <!--ordering -->
       <template id="order-details.html">
-            <ons-page id="order-details">
-               <ons-toolbar>
+         <ons-page id="order-details">
+            <ons-toolbar>
+               <div class="left">
+                  <ons-back-button>Order</ons-back-button>
+                  Order Details
+               </div>
+            </ons-toolbar>
+            <ons-list>
+               <ons-list-header>Comments</ons-list-header>
+               <ons-list-item>
                   <div class="left">
-                     <ons-back-button>Order</ons-back-button>
-                     Order Details
+                     <p>Blablablabla</p>
                   </div>
-               </ons-toolbar>
-
-
-                  <ons-list>
-                    <ons-list-header>Comments</ons-list-header>
-                    <ons-list-item>
-                            <div class="left">
-
-                                 <p>Blablablabla</p>
-                                 </div>
-                                 </ons-list-item>
-
-                    <ons-list-header>Orders</ons-list-header>
-                    <ons-list-item>
-                      <div class="left">
-                        <img class="list-item__thumbnail" src="img/lettuce.jpg">
-                      </div>
-                      <div class="center">
-                        <span class="list-item__title">Lettuce</span><span class="list-item__subtitle">Amount: 10</span>
-                      </div>
-                    </ons-list-item>
-
-                    <ons-list-item>
-                            <div class="left">
-                              <img class="list-item__thumbnail" src="img/lettuce.jpg">
-                            </div>
-                            <div class="center">
-                              <span class="list-item__title">Lettuce</span><span class="list-item__subtitle">Amount: 10</span>
-                            </div>
-                          </ons-list-item>
-
-                    <ons-list-item>
-                            <div class="left">
-                              <img class="list-item__thumbnail" src="img/lettuce.jpg">
-                            </div>
-                            <div class="center">
-                              <span class="list-item__title">Lettuce</span><span class="list-item__subtitle">Amount: 10</span>
-                            </div>
-                          </ons-list-item>
-
-                    <ons-list-item>
-                            <div class="left">
-                              <img class="list-item__thumbnail" src="img/lettuce.jpg">
-                            </div>
-                            <div class="center">
-                              <span class="list-item__title">Lettuce</span><span class="list-item__subtitle">Amount: 10</span>
-                            </div>
-                          </ons-list-item>
-                    </ons-list>
-            </ons-page>
-         </template>
-
-
-        <template id="cancel-order.html">
-        <ons-dialog id="cancel-order">
-          <div style="text-align: center; padding: 10px;">
-            <p>
-              Do you really want to cancel this order ?
-              <p>
-
-                    <ons-button onclick="hideDialog('cancel-order')">Yes</ons-button>
-
-
-                                        <ons-button onclick="hideDialog('cancel-order')">No</ons-button>
-
-          </div>
-
-        </ons-dialog>
-        </template>
-
-
+               </ons-list-item>
+               <ons-list-header>Orders</ons-list-header>
+               <ons-list-item>
+                  <div class="left">
+                     <img class="list-item__thumbnail" src="img/lettuce.jpg">
+                  </div>
+                  <div class="center">
+                     <span class="list-item__title">Lettuce</span><span class="list-item__subtitle">Amount: 10</span>
+                  </div>
+               </ons-list-item>
+               <ons-list-item>
+                  <div class="left">
+                     <img class="list-item__thumbnail" src="img/lettuce.jpg">
+                  </div>
+                  <div class="center">
+                     <span class="list-item__title">Lettuce</span><span class="list-item__subtitle">Amount: 10</span>
+                  </div>
+               </ons-list-item>
+               <ons-list-item>
+                  <div class="left">
+                     <img class="list-item__thumbnail" src="img/lettuce.jpg">
+                  </div>
+                  <div class="center">
+                     <span class="list-item__title">Lettuce</span><span class="list-item__subtitle">Amount: 10</span>
+                  </div>
+               </ons-list-item>
+               <ons-list-item>
+                  <div class="left">
+                     <img class="list-item__thumbnail" src="img/lettuce.jpg">
+                  </div>
+                  <div class="center">
+                     <span class="list-item__title">Lettuce</span><span class="list-item__subtitle">Amount: 10</span>
+                  </div>
+               </ons-list-item>
+            </ons-list>
+         </ons-page>
+      </template>
+      <template id="cancel-order.html">
+         <ons-dialog id="cancel-order">
+            <div style="text-align: center; padding: 10px;">
+               <p>
+                  Do you really want to cancel this order ?
+               <p>
+                  <ons-button onclick="hideDialog('cancel-order')">Yes</ons-button>
+                  <ons-button onclick="hideDialog('cancel-order')">No</ons-button>
+            </div>
+         </ons-dialog>
+      </template>
       <template id="vendeur.html">
          <ons-page id="vendeur">
             <ons-splitter>
@@ -454,11 +385,9 @@
                         </ons-icon>
                      </div>
                   </ons-toolbar>
-
-        <ons-fab onclick="toggle_search()" class="toggleSearch" position="bottom right">
-        <ons-icon  icon="md-search"></ons-icon>
-      </ons-fab>
-
+                  <ons-fab onclick="toggle_search()" class="toggleSearch" position="bottom right">
+                     <ons-icon  icon="md-search"></ons-icon>
+                  </ons-fab>
                   <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
                      Swipe right to open the menu!
                   </p>
@@ -648,40 +577,42 @@
                         History
                      </div>
                   </ons-toolbar>
-
-
                   <ons-list>
-                        <ons-list-header><ons-icon icon="md-info" style="color:green" > Completed</ons-icon></ons-list-header>
-                        <ons-list-item  modifier="chevron" tappable>
-                           <div class="center">
-                              <span class="list-item__title">10+ Products</span><span class="list-item__subtitle">10 mins ago</span>
-                           </div>
-                        </ons-list-item>
-                        <ons-list-item  modifier="chevron" tappable>
-                           <div class="center">
-                              <span class="list-item__title">1 Products</span><span class="list-item__subtitle">10 mins ago</span>
-                           </div>
-                        </ons-list-item>
-                        <ons-list-item  modifier="chevron" tappable>
-                           <div class="center">
-                              <span class="list-item__title">3 Products</span><span class="list-item__subtitle">10 mins ago</span>
-                           </div>
-                        </ons-list-item>
-                        <ons-list-header><ons-icon icon="md-info" style="color:orange" > Pending</ons-icon></ons-list-header>
-                        <ons-list-item  modifier="chevron" tappable>
-                           <div class="center">
-                              <span class="list-item__title">2 Products </span><span class="list-item__subtitle">10 mins ago</span>
-                           </div>
-                        </ons-list-item>
-                        <ons-list-header><ons-icon icon="md-info" style="color:red" > Cancelled</ons-icon></ons-list-header>
-                        <ons-list-item  modifier="chevron" tappable>
-
-                           <div class="center">
-                              <span class="list-item__title">10 Products</span><span class="list-item__subtitle">10 mins ago</span>
-                           </div>
-                        </ons-list-item>
-                     </ons-list>
-
+                     <ons-list-header>
+                        <ons-icon icon="md-info" style="color:green" > Completed</ons-icon>
+                     </ons-list-header>
+                     <ons-list-item  modifier="chevron" tappable>
+                        <div class="center">
+                           <span class="list-item__title">10+ Products</span><span class="list-item__subtitle">10 mins ago</span>
+                        </div>
+                     </ons-list-item>
+                     <ons-list-item  modifier="chevron" tappable>
+                        <div class="center">
+                           <span class="list-item__title">1 Products</span><span class="list-item__subtitle">10 mins ago</span>
+                        </div>
+                     </ons-list-item>
+                     <ons-list-item  modifier="chevron" tappable>
+                        <div class="center">
+                           <span class="list-item__title">3 Products</span><span class="list-item__subtitle">10 mins ago</span>
+                        </div>
+                     </ons-list-item>
+                     <ons-list-header>
+                        <ons-icon icon="md-info" style="color:orange" > Pending</ons-icon>
+                     </ons-list-header>
+                     <ons-list-item  modifier="chevron" tappable>
+                        <div class="center">
+                           <span class="list-item__title">2 Products </span><span class="list-item__subtitle">10 mins ago</span>
+                        </div>
+                     </ons-list-item>
+                     <ons-list-header>
+                        <ons-icon icon="md-info" style="color:red" > Cancelled</ons-icon>
+                     </ons-list-header>
+                     <ons-list-item  modifier="chevron" tappable>
+                        <div class="center">
+                           <span class="list-item__title">10 Products</span><span class="list-item__subtitle">10 mins ago</span>
+                        </div>
+                     </ons-list-item>
+                  </ons-list>
                </ons-page>
             </template>
             <template id="chats.html">
@@ -701,7 +632,6 @@
                   </p>
                </ons-page>
             </template>
-
             <template id="settings.html">
                <ons-page>
                   <ons-toolbar>
@@ -713,100 +643,95 @@
                      <div class="center">
                         Settings
                      </div>
-                     <div class="right" style="margin-right: 10px;" > <ons-button disabled>Save All</ons-button></div>
+                     <div class="right" style="margin-right: 10px;" >
+                        <ons-button disabled>Save All</ons-button>
+                     </div>
                   </ons-toolbar>
                   <ons-list>
-                      <ons-list-header>
-                         Profile Picture
-                      </ons-list-header>
-                      <ons-list-item>
-                            <div class="thumbnail-frame">
-                                    <img class="thumbnail" src="img/head-temp.jpg">
-                            </div>
-                            <div class="right">
-                            <label class="custom-file-upload">
-                                <input type="file"/>
-                                <ons-button>Upload New Picture</ons-button>
-                            </label>
-                            </div>
-
-                      </ons-list-item>
-                      <ons-list-header>
-                            Account Settings
-
-                            <ons-button>Edit</ons-button>
-                         </ons-list-header>
-                         <ons-list-item>
-                                <div class="left">
-                                    <label>Email: </label>
-                                </div>
-                                <div class="right">
-                                        <ons-input ></ons-input>
-                                </div>
-                             </ons-list-item>
-                             <ons-list-header>Password
-                                    <ons-button>Edit</ons-button>
-                                </ons-list-header>
-                             <ons-list-item>
-                                    <div class="left">
-                                        <label>Old Password: </label>
-                                    </div>
-                                    <div class="right">
-                                            <ons-input ></ons-input>
-                                    </div>
-                                 </ons-list-item>
-                                 <ons-list-item>
-                                        <div class="left">
-                                            <label>New Password: </label>
-                                        </div>
-                                        <div class="right">
-                                                <ons-input ></ons-input>
-                                        </div>
-                                     </ons-list-item>
-                                     <ons-list-item>
-                                            <div class="left">
-                                                <label>Confirm Password: </label>
-                                            </div>
-                                            <div class="right">
-                                                    <ons-input ></ons-input>
-                                            </div>
-                                         </ons-list-item>
-
-                                         <ons-list-header>
-                                                Profile Settings
-
-                                                <ons-button>Edit</ons-button>
-                                             </ons-list-header>
-                                             <ons-list-item>
-                                                    <div class="left">
-                                                        <label>First Name: </label>
-                                                    </div>
-                                                    <div class="right">
-                                                            <ons-input ></ons-input>
-                                                    </div>
-                                                 </ons-list-item>
-
-
-                                                 <ons-list-item>
-                                                        <div class="left">
-                                                            <label>Last Name: </label>
-                                                        </div>
-                                                        <div class="right">
-                                                                <ons-input ></ons-input>
-                                                        </div>
-                                                     </ons-list-item>
-                                                    <ons-list-header>Position </ons-list-header>
-                                                         <p style="text-align : center; opacity: 0.6;">Turn on GPS for precise location</p>
-                                                         <ons-list-item>
-
-                                                         <div class="left">
-                                                                    <ons-input disabled></ons-input>
-                                                            </div>
-                                                            <div class="right">
-                                                                    <ons-button>Get Position</ons-button>
-                                                            </div>
-                                                         </ons-list-item>
-
+                     <ons-list-header>
+                        Profile Picture
+                     </ons-list-header>
+                     <ons-list-item>
+                        <div class="thumbnail-frame">
+                           <img class="thumbnail" src="img/head-temp.jpg">
+                        </div>
+                        <div class="right">
+                           <label class="custom-file-upload">
+                              <input type="file"/>
+                              <ons-button>Upload New Picture</ons-button>
+                           </label>
+                        </div>
+                     </ons-list-item>
+                     <ons-list-header>
+                        Account Settings
+                        <ons-button>Edit</ons-button>
+                     </ons-list-header>
+                     <ons-list-item>
+                        <div class="left">
+                           <label>Email: </label>
+                        </div>
+                        <div class="right">
+                           <ons-input ></ons-input>
+                        </div>
+                     </ons-list-item>
+                     <ons-list-header>
+                        Password
+                        <ons-button>Edit</ons-button>
+                     </ons-list-header>
+                     <ons-list-item>
+                        <div class="left">
+                           <label>Old Password: </label>
+                        </div>
+                        <div class="right">
+                           <ons-input ></ons-input>
+                        </div>
+                     </ons-list-item>
+                     <ons-list-item>
+                        <div class="left">
+                           <label>New Password: </label>
+                        </div>
+                        <div class="right">
+                           <ons-input ></ons-input>
+                        </div>
+                     </ons-list-item>
+                     <ons-list-item>
+                        <div class="left">
+                           <label>Confirm Password: </label>
+                        </div>
+                        <div class="right">
+                           <ons-input ></ons-input>
+                        </div>
+                     </ons-list-item>
+                     <ons-list-header>
+                        Profile Settings
+                        <ons-button>Edit</ons-button>
+                     </ons-list-header>
+                     <ons-list-item>
+                        <div class="left">
+                           <label>First Name: </label>
+                        </div>
+                        <div class="right">
+                           <ons-input ></ons-input>
+                        </div>
+                     </ons-list-item>
+                     <ons-list-item>
+                        <div class="left">
+                           <label>Last Name: </label>
+                        </div>
+                        <div class="right">
+                           <ons-input ></ons-input>
+                        </div>
+                     </ons-list-item>
+                     <ons-list-header>Position </ons-list-header>
+                     <p style="text-align : center; opacity: 0.6;">Turn on GPS for precise location</p>
+                     <ons-list-item>
+                        <div class="left">
+                           <ons-input disabled></ons-input>
+                        </div>
+                        <div class="right">
+                           <ons-button>Get Position</ons-button>
+                        </div>
+                     </ons-list-item>
                   </ons-list>
                </ons-page>
             </template>
@@ -982,203 +907,186 @@
          </ons-dialog>
       </template>
       <!-- AGRICULTEUR -->
-
       <!--main-->
       <template id="agriculteur.html">
-        <ons-page id="agriculteur">
-                <ons-splitter>
-                        <ons-splitter-side animation="reveal" id="menu" side="left" width="220px" collapse swipeable>
-                           <ons-page>
-                              <ons-list>
-                                 <ons-list-item onclick="fn.load('home.html')" class="user-account" >
-                                    <div class="thumbnail-frame">
-                                       <img class="thumbnail" src="img/head-temp.jpg">
-                                    </div>
-                                    <span class="list-item__title">Smith Doe</span><span class="list-item__subtitle">SmithDoe@gmail.com</span>
-                                    <span class="list-item__subtitle">
-                                       <ons-button class="logout-button" modifier="quiet">Log out</ons-button>
-                                       <ons-button modifier="" onclick="fn.load('settings.html')">Edit</ons-button>
-                                    </span>
-                                 </ons-list-item>
-                                 <ons-list-item onclick="fn.load('home.html')" tappable>
-                                    <ons-icon style="margin-right: 10px;"
-                                       icon="md-view-carousel">
-                                    </ons-icon>
-                                    Dashboard
-                                 </ons-list-item>
-                                 <ons-list-item onclick="fn.load('settings.html')" tappable>
-                                        <ons-icon style="margin-right: 10px;"
-                                           icon="md-notifications">
-                                        </ons-icon>
-                                        Orders
-                                     </ons-list-item>
-                                     <ons-list-item onclick="fn.load('settings.html')" tappable>
-                                            <ons-icon style="margin-right: 10px;"
-                                               icon="md-comments">
-                                            </ons-icon>
-                                            Chats
-                                         </ons-list-item>
-                                         <ons-list-item onclick="fn.load('settings.html')" tappable>
-                                                <ons-icon style="margin-right: 10px;"
-                                                   icon="md-alert-triangle">
-                                                </ons-icon>
-                                                Warnings
-                                             </ons-list-item>
-                                             <ons-list-item onclick="fn.load('settings.html')" tappable>
-                                                    <ons-icon style="margin-right: 10px;"
-                                                       icon="md-star">
-                                                    </ons-icon>
-                                                    Forum
-                                                 </ons-list-item>
-                                                 <ons-list-item onclick="fn.load('settings.html')" tappable>
-                                                        <ons-icon style="margin-right: 10px;"
-                                                           icon="md-settings">
-                                                        </ons-icon>
-                                                        Settings
-                                                     </ons-list-item>
-
-                                 <ons-list-item onclick="fn.load('about.html')" tappable>
-                                    <ons-icon style="margin-right: 10px;"
-                                       icon="md-time">
-                                    </ons-icon>
-                                    History
-                                 </ons-list-item>
-                              </ons-list>
-                           </ons-page>
-                        </ons-splitter-side>
-                        <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
-                     </ons-splitter>
-
-          <template id="home.html">
-            <ons-page>
-              <ons-toolbar>
-                <div class="left">
-                  <ons-toolbar-button onclick="fn.open()">
-                    <ons-icon icon="md-menu"></ons-icon>
-                  </ons-toolbar-button>
-                </div>
-                <div class="center">
-                  Dashboard
-                </div>
-              </ons-toolbar>
-              <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
-                Swipe up or down !
-              </p>
-
-              <ons-carousel fullscreen direction="vertical" swipeable auto-scroll overscrollable id="carousel">
-                  <ons-carousel-item style="background-image: url('img/weather.jpg')">
-                 
-                    <div style="text-align: center; font-size: 30px; margin-top: 20px; color: #fff; text-shadow: 1px 1px 2px black;">
-                      <h3>Port Louis</h3>
-                      <h1 style="font-size:50px;margin-left:15px;margin-top: -5px;">38&deg;</h1>
-                      <p style="font-size:15px;margin-top: -15px;" >Slighly rainy</p>
-                      <img style="padding-top: -20px;" src="img/icons/rainy-1.svg">
-                    </div>
-                    <div class=".col-6 .col-md-4" style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 10px;"><h3>Today</h3></div>
-                    <hr style="color: #fff;" >
-                    <div class="container">
-<div class="row justify-content-md-center container " >
-
-                    <div class=".col-4 " style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 20px;">
-                      <p style="margin-left: -8px;" >4 am</p>
-                      <img  style="margin-left: -20px;" src="img/icons/rainy-1.svg">
-                      <p >38&deg;</p>
-                    </div>
-
-
-                    <div class=".col-4 " style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 20px;">
-                      <p style="margin-left: -8px;" >4 am</p>
-                      <img  style="margin-left: -20px;" src="img/icons/rainy-1.svg">
-                      <p >38&deg;</p>
-                    </div>
-                    <div class=".col-4 " style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 20px;">
-                      <p style="margin-left: -8px;" >4 am</p>
-                      <img  style="margin-left: -20px;" src="img/icons/rainy-1.svg">
-                      <p >38&deg;</p>
-                    </div>
-                    <div class=".col-4 " style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 20px;">
-                      <p style="margin-left: -8px;" >4 am</p>
-                      <img  style="margin-left: -20px;" src="img/icons/rainy-1.svg">
-                      <p >38&deg;</p>
-                    </div>
-                    <div class=".col-4 " style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 20px;">
-                      <p style="margin-left: -8px;" >4 am</p>
-                      <img  style="margin-left: -20px;" src="img/icons/rainy-1.svg">
-                      <p >38&deg;</p>
-                    </div>
-
-</div>
-
-
-</div>
-
-<!--div class=".col-6 .col-md-4" style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 10px;"><h3>Forcast</h3></div>
-                    <hr style="color: #fff;" >
-                    <div class="container">
-                      <div class="row justify-content-md-center">
-                        <div class="col-4">
-                          Monday
+         <ons-page id="agriculteur">
+            <ons-splitter>
+               <ons-splitter-side animation="reveal" id="menu" side="left" width="220px" collapse swipeable>
+                  <ons-page>
+                     <ons-list>
+                        <ons-list-item onclick="fn.load('home.html')" class="user-account" >
+                           <div class="thumbnail-frame">
+                              <img class="thumbnail" src="img/head-temp.jpg">
+                           </div>
+                           <span class="list-item__title">Smith Doe</span><span class="list-item__subtitle">SmithDoe@gmail.com</span>
+                           <span class="list-item__subtitle">
+                              <ons-button class="logout-button" modifier="quiet">Log out</ons-button>
+                              <ons-button modifier="" onclick="fn.load('settings.html')">Edit</ons-button>
+                           </span>
+                        </ons-list-item>
+                        <ons-list-item onclick="fn.load('home.html')" tappable>
+                           <ons-icon style="margin-right: 10px;"
+                              icon="md-view-carousel">
+                           </ons-icon>
+                           Dashboard
+                        </ons-list-item>
+                        <ons-list-item onclick="fn.load('settings.html')" tappable>
+                           <ons-icon style="margin-right: 10px;"
+                              icon="md-notifications">
+                           </ons-icon>
+                           Orders
+                        </ons-list-item>
+                        <ons-list-item onclick="fn.load('settings.html')" tappable>
+                           <ons-icon style="margin-right: 10px;"
+                              icon="md-comments">
+                           </ons-icon>
+                           Chats
+                        </ons-list-item>
+                        <ons-list-item onclick="fn.load('settings.html')" tappable>
+                           <ons-icon style="margin-right: 10px;"
+                              icon="md-alert-triangle"></ons-icon>
+                           Warnings
+                        </ons-list-item>
+                        <ons-list-item onclick="fn.load('settings.html')" tappable>
+                           <ons-icon style="margin-right: 10px;"
+                              icon="md-star"></ons-icon>
+                           Forum
+                        </ons-list-item>
+                        <ons-list-item onclick="fn.load('settings.html')" tappable>
+                           <ons-icon style="margin-right: 10px;"
+                              icon="md-settings"></ons-icon>
+                           Settings
+                        </ons-list-item>
+                        <ons-list-item onclick="fn.load('about.html')" tappable>
+                           <ons-icon style="margin-right: 10px;"
+                              icon="md-time"></ons-icon>
+                           History
+                        </ons-list-item>
+                     </ons-list>
+                  </ons-page>
+               </ons-splitter-side>
+               <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+            </ons-splitter>
+            <template id="home.html">
+               <ons-page>
+                  <ons-toolbar>
+                     <div class="left">
+                        <ons-toolbar-button onclick="fn.open()">
+                           <ons-icon icon="md-menu"></ons-icon>
+                        </ons-toolbar-button>
+                     </div>
+                     <div class="center">
+                        Dashboard
+                     </div>
+                  </ons-toolbar>
+                  <!-- <p style="text-align: center; opacity: 0.6; padding-top: 20px;"> -->
+                     <!-- Swipe up or down ! -->
+                  <!-- </p> -->
+                  <ons-carousel fullscreen direction="horizontal" swipeable auto-scroll overscrollable id="carousel">
+			   <ons-carousel-item style="background-image: url('img/weather.jpg')">
+				<div class="arrow bounce"></div>
+                        <div style="text-align: center; font-size: 30px; margin-top: 20px; color: #fff; text-shadow: 1px 1px 2px black;">
+                           <h3>Port Louis</h3>
+                           <h1 style="font-size:50px;margin-left:15px;margin-top: -5px;">38&deg;</h1>
+                           <p style="font-size:15px;margin-top: -15px;" >Slighly rainy</p>
+                           <img style="padding-top: -20px;" src="img/icons/rainy-1.svg">
                         </div>
-                        <div class="col-4">
-                          <img  style="text-align: center; " src="img/icons/rainy-1.svg">
+                        <div class=".col-6 .col-md-4" style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 10px;">
+                           <h3>Today</h3>
                         </div>
-                        <div class="col-4">
-                          <p style="text-align: right; ">38&deg;</p>
+                        <hr style="color: #fff;" >
+                        <div class="container">
+                           <div class="row justify-content-md-center  " >
+                              <div class=".col-4 " style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 20px;">
+                                 <p style="margin-left: -8px;" >4 am</p>
+                                 <img  style="margin-left: -20px;" src="img/icons/rainy-1.svg">
+                                 <p >38&deg;</p>
+                              </div>
+                              <div class=".col-4 " style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 20px;">
+                                 <p style="margin-left: -8px;" >4 am</p>
+                                 <img  style="margin-left: -20px;" src="img/icons/rainy-1.svg">
+                                 <p >38&deg;</p>
+                              </div>
+                              <div class=".col-4 " style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 20px;">
+                                 <p style="margin-left: -8px;" >4 am</p>
+                                 <img  style="margin-left: -20px;" src="img/icons/rainy-1.svg">
+                                 <p >38&deg;</p>
+                              </div>
+                              <div class=".col-4 " style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 20px;">
+                                 <p style="margin-left: -8px;" >4 am</p>
+                                 <img  style="margin-left: -20px;" src="img/icons/rainy-1.svg">
+                                 <p >38&deg;</p>
+                              </div>
+                              <div class=".col-4 " style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 20px;">
+                                 <p style="margin-left: -8px;" >4 am</p>
+                                 <img  style="margin-left: -20px;" src="img/icons/rainy-1.svg">
+                                 <p >38&deg;</p>
+                              </div>
+                           </div>
                         </div>
-                      </div>
-
-                    </div>
-                  </ons-scroller-->
-
-
-                  </ons-carousel-item>
-
-
-                  <ons-carousel-item style="background-color: #373B44;">
-                    <div style="text-align: center; font-size: 30px; margin-top: 20px; color: #fff;">
-                      DARK
-                    </div>
-                  </ons-carousel-item>
-                  <ons-carousel-item style="background-color: #D38312;">
-                    <div style="text-align: center; font-size: 30px; margin-top: 20px; color: #fff;">
-                      ORANGE
-                    </div>
-                  </ons-carousel-item>
-                </ons-carousel>
-            </ons-page>
-          </template>
-
-          <template id="settings.html">
-            <ons-page>
-              <ons-toolbar>
-                <div class="left">
-                  <ons-toolbar-button onclick="fn.open()">
-                    <ons-icon icon="md-menu"></ons-icon>
-                  </ons-toolbar-button>
-                </div>
-                <div class="center">
-                  Settings
-                </div>
-              </ons-toolbar>
-            </ons-page>
-          </template>
-
-          <template id="about.html">
-            <ons-page>
-              <ons-toolbar>
-                <div class="left">
-                  <ons-toolbar-button onclick="fn.open()">
-                    <ons-icon icon="md-menu"></ons-icon>
-                  </ons-toolbar-button>
-                </div>
-                <div class="center">
-                  About
-                </div>
-              </ons-toolbar>
-            </ons-page>
-          </template>
-        </ons-page>
-         </template>
+                        <!-- div class=".col-6 .col-md-4" style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 10px;"><h3>Forcast</h3></div>
+                           <hr style="color: #fff;" >
+                           <div class="container">
+                           	<div class="row justify-content-md-center">
+                           		<div class="col-4">
+                           			Monday
+                           		</div>
+                           		<div class="col-4">
+                           			<img  style="text-align: center; " src="img/icons/rainy-1.svg">
+                           		</div>
+                           		<div class="col-4">
+                           			<p style="text-align: right; ">38&deg;</p>
+                           		</div>
+                           	</div>
+                           
+                           </div>
+                           </ons-scroller -->
+                     </ons-carousel-item>
+                     <ons-carousel-item style="background-color: #373B44;">
+				<div class="arrow bounce"></div>
+                        <div style="text-align: center; font-size: 30px; margin-top: 20px; color: #fff;">
+                           DARK
+                        </div>
+                     </ons-carousel-item>
+                     <ons-carousel-item style="background-color: #D38312;">
+				<div class="arrow bounce"></div>
+                        <div style="text-align: center; font-size: 30px; margin-top: 20px; color: #fff;">
+                           ORANGE
+                        </div>
+                     </ons-carousel-item>
+                  </ons-carousel>
+               </ons-page>
+            </template>
+            <template id="settings.html">
+               <ons-page>
+                  <ons-toolbar>
+                     <div class="left">
+                        <ons-toolbar-button onclick="fn.open()">
+                           <ons-icon icon="md-menu"></ons-icon>
+                        </ons-toolbar-button>
+                     </div>
+                     <div class="center">
+                        Settings
+                     </div>
+                  </ons-toolbar>
+               </ons-page>
+            </template>
+            <template id="about.html">
+               <ons-page>
+                  <ons-toolbar>
+                     <div class="left">
+                        <ons-toolbar-button onclick="fn.open()">
+                           <ons-icon icon="md-menu"></ons-icon>
+                        </ons-toolbar-button>
+                     </div>
+                     <div class="center">
+                        About
+                     </div>
+                  </ons-toolbar>
+               </ons-page>
+            </template>
+         </ons-page>
+      </template>
       <!--script type="text/javascript" src="cordova.js"></script-->
       <script type="text/javascript" src="js/index.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
