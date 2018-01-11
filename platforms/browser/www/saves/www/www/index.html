@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      
+        <meta name="format-detection" content="telephone=no">
+        <meta charset="utf-8">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" href="css/onsenui.css">
+        <link rel="stylesheet" href="css/onsen-css-components.min.css">
+        <script src="js/onsenui.min.js"></script>
+        <script>
+            ons.platform.select('android');
+        </script>
+        <script src="https://unpkg.com/jquery/dist/jquery.min.js"></script>
+
+        <title>Hello World</title>
+    </head>
+    <body>
+
+            <ons-navigator animation="lift-md" id="myNavigator" page="page1.html"></ons-navigator>
+            
+            <template id="page1.html">
+              <ons-page id="page1">
+                    <div class="login-page">
+                            
+                            <div class="login-content" >
+                            <img src="img/logo-title.png">
+                            <h3>Sign in</h3>
+                            <p>
+                                <ons-input id="email" modifier="underbar" placeholder="Email" float></ons-input>
+                            </p>
+                            <p>
+                                <ons-input id="password" modifier="underbar" type="password" placeholder="Password" float></ons-input>
+                            </p>
+                            <p class="next">
+                                <ons-button id="push-button" >Sign in</ons-button>
+                                <ons-progress-bar indeterminate></ons-progress-bar>
+                            </p>
+                            </div>
+                        
+                        </div> 
+              </ons-page>
+            </template>
+            
+            <template id="page2.html">
+              <ons-page id="page2">
+                    <ons-splitter>
+                            <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+                              <ons-page>
+                                <ons-list>
+                                  <ons-list-item onclick="fn.load('home.html')" tappable>
+                                    Home
+                                  </ons-list-item>
+                                  <ons-list-item onclick="fn.load('settings.html')" tappable>
+                                    Settings
+                                  </ons-list-item>
+                                  <ons-list-item onclick="fn.load('about.html')" tappable>
+                                    About
+                                  </ons-list-item>
+                                </ons-list>
+                              </ons-page>
+                            </ons-splitter-side>
+                            <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+                          </ons-splitter>
+                          
+                          <template id="home.html">
+                            <ons-page>
+                              <ons-toolbar>
+                                <div class="left">
+                                  <ons-toolbar-button onclick="fn.open()">
+                                    <ons-icon icon="md-menu"></ons-icon>
+                                  </ons-toolbar-button>
+                                </div>
+                                <div class="center">
+                                  Main
+                                </div>
+                              </ons-toolbar>
+                              <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
+                                Swipe right to open the menu!
+                              </p>
+                            </ons-page>
+                          </template>
+                          
+                          <template id="settings.html">
+                            <ons-page>
+                              <ons-toolbar>
+                                <div class="left">
+                                  <ons-toolbar-button onclick="fn.open()">
+                                    <ons-icon icon="md-menu"></ons-icon>
+                                  </ons-toolbar-button>
+                                </div>
+                                <div class="center">
+                                  Settings
+                                </div>
+                              </ons-toolbar>
+                            </ons-page>
+                          </template>
+                          
+                          <template id="about.html">
+                            <ons-page>
+                              <ons-toolbar>
+                                <div class="left">
+                                  <ons-toolbar-button onclick="fn.open()">
+                                    <ons-icon icon="md-menu"></ons-icon>
+                                  </ons-toolbar-button>
+                                </div>
+                                <div class="center">
+                                  About
+                                </div>
+                              </ons-toolbar>
+                            </ons-page>
+                          </template>
+              </ons-page>
+            </template>
+                    
+        <!--script type="text/javascript" src="cordova.js"></script-->
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>

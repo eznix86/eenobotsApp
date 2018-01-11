@@ -314,6 +314,7 @@
                   </ons-list>
             </ons-page>
       </template>
+
       <template id="cancel-order.html">
             <ons-dialog id="cancel-order">
                   <div style="text-align: center; padding: 10px;">
@@ -325,6 +326,7 @@
                   </div>
             </ons-dialog>
       </template>
+
       <template id="vendeur.html">
             <ons-page id="vendeur">
                   <ons-splitter>
@@ -743,6 +745,7 @@
                   </template>
             </ons-page>
       </template>
+
       <!-- CHAUFFEUR -->
       <template id="chauffeur.html">
             <ons-page id="chauffeur">
@@ -949,16 +952,16 @@
                                                 </ons-icon>
                                                 Orders
                                           </ons-list-item>
-                                          <ons-list-item onclick="fn.load('settings.html')" tappable>
+                                          <ons-list-item onclick="fn.load('chat.html')" tappable>
                                                 <ons-icon style="margin-right: 10px;" icon="md-comments">
                                                 </ons-icon>
                                                 Chats
                                           </ons-list-item>
-                                          <ons-list-item onclick="fn.load('settings.html')" tappable>
+                                          <ons-list-item onclick="fn.load('warnings.html')" tappable>
                                                 <ons-icon style="margin-right: 10px;" icon="md-alert-triangle"></ons-icon>
                                                 Warnings
                                           </ons-list-item>
-                                          <ons-list-item onclick="fn.load('settings.html')" tappable>
+                                          <ons-list-item onclick="fn.load('forum.html')" tappable>
                                                 <ons-icon style="margin-right: 10px;" icon="md-star"></ons-icon>
                                                 Forum
                                           </ons-list-item>
@@ -967,384 +970,436 @@
                                                 Settings
                                           </ons-list-item>
                                           <ons-list-item onclick="fn.load('about.html')" tappable>
-                                                <ons-icon style="margin-right: 10px;" icon="md-time"></ons-icon>
-                                                History
+                                                <ons-icon style="margin-right: 10px;" icon="md-info"></ons-icon>
+                                                About
                                           </ons-list-item>
                                     </ons-list>
                               </ons-page>
                         </ons-splitter-side>
                         <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
                   </ons-splitter>
-                  <template id="home.html">
-                        <ons-page>
-                              <ons-toolbar>
-                                    <div class="left">
-                                          <ons-toolbar-button onclick="fn.open()">
-                                                <ons-icon icon="md-menu"></ons-icon>
-                                          </ons-toolbar-button>
+
+      <template id="home.html">
+            <ons-page>
+                  <ons-toolbar>
+                        <div class="left">
+                              <ons-toolbar-button onclick="fn.open()">
+                                    <ons-icon icon="md-menu"></ons-icon>
+                              </ons-toolbar-button>
+                        </div>
+                        <div class="center">
+                              Dashboard
+                        </div>
+                  </ons-toolbar>
+                  <div class=" bounce"><img src="img/swipe.svg"></div>
+                  <ons-carousel fullscreen direction="horizontal" swipeable auto-scroll overscrollable id="carousel">
+                        <ons-carousel-item style="background-image: url('img/activity.jpg')">
+                              
+                                    <div class=".col-6 .col-md-4" style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 10px;">
+                                          <h3>Realtime Monitoring</h3>
                                     </div>
-                                    <div class="center">
-                                          Dashboard
-                                    </div>
-                              </ons-toolbar>
-
-                              <ons-carousel fullscreen direction="horizontal" swipeable auto-scroll overscrollable id="carousel">
-                                    <ons-carousel-item style="background-image: url('img/activity.jpg')">
-                                          <div class="arrow bounce"></div>
-                                                <div class=".col-6 .col-md-4" style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 10px;">
-                                                      <h3>Realtime Monitoring</h3>
+                                    <hr style="color: #fff;">
+                                    <div class="d-flex flex-column">
+                                          <div class="d-flex justify-content-between">
+                                                <div style="margin-left: 10px;">
+                                                      <img src="img/arrow_up.png">
                                                 </div>
-                                                <hr style="color: #fff;">
-                                                <div class="d-flex flex-column">
-                                                      <div class="d-flex justify-content-between">
-                                                            <div style="margin-left: 10px;">
-                                                                  <img src="img/arrow_up.png">
-                                                            </div>
-                                                            <div >
-                                                                  Temperature
-                                                            </div>
-                                                            <div style="margin-right: 10px;">
-                                                                  35&deg;C
-                                                            </div>
-
-                                                      </div>
-
-                                                      <div class="d-flex justify-content-between">
-                                                            <div style="margin-left: 10px;">
-                                                                  <img src="img/arrow_down.png">
-                                                            </div>
-                                                            <div >
-                                                                  Moisture
-                                                            </div>
-                                                            <div style="margin-right: 10px;">
-                                                                  50%
-                                                            </div>
-                                                      
-                                                      
-                                                      </div>
-
-                                                      <div class="d-flex justify-content-between">
-                                                            <div style="margin-left: 10px;">
-                                                                  <img src="img/arrow_up.png">
-                                                            </div>
-                                                            <div >
-                                                                  humidity
-                                                            </div>
-                                                            <div style="margin-right: 10px;">
-                                                                 50%
-                                                            </div>
-
-                                                      </div>
-
-                                                      <div class="d-flex justify-content-between">
-                                                            <div style="margin-left: 10px;">
-                                                                  <img src="img/arrow_constant.png">
-                                                            </div>
-                                                            <div >
-                                                                  Water Level
-                                                            </div>
-                                                            <div style="margin-right: 10px;">
-                                                                 50%
-                                                            </div>
-
-                                                      </div>
-                                                      <div class="d-flex justify-content-between">
-                                                            <div style="margin-left: 10px;">
-                                                                  <img src="img/arrow_up.png">
-                                                            </div>
-                                                            <div >
-                                                                  Solution Level
-                                                            </div>
-                                                            <div style="margin-right: 10px;">
-                                                                  50%
-                                                            </div>
-                                                      
-                                                      </div>
-                                                      <div class="d-flex justify-content-between">
-                                                            <div style="margin-left: 10px;">
-                                                                  <img src="img/arrow_up.png">
-                                                            </div>
-                                                            <div>
-                                                                  Light Level
-                                                            </div>
-                                                            <div style="margin-right: 10px;">
-                                                                  10
-                                                            </div>
-                                                      
-                                                      </div>
-                                                      
-                                                      
+                                                <div >
+                                                      Temperature
                                                 </div>
-                                                <div class=".col-6 .col-md-4" style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 10px;">
-                                                      <h3>Recent Activity</h3>
+                                                <div style="margin-right: 10px;">
+                                                      35&deg;C
                                                 </div>
-                                                <hr style="color: #fff;">
-                                                <div class="d-flex flex-column">
-                                                      <div class="d-flex justify-content-between">
-                                                            <div style="margin-left: 10px;">
-                                                                  Light On
-                                                            </div>
 
-                                                            <div style="margin-right: 10px;">
-                                                                 10 Mins ago
-                                                            </div>
-                                                           
-                                                      </div>
-                                                      <div class="d-flex justify-content-between">
-                                                            <div style="margin-left: 10px;">
-                                                                  Water On
-                                                            </div>
-                                                      
-                                                            <div style="margin-right: 10px;">
-                                                                  10 Mins ago
-                                                            </div>
-                                                      
-                                                      </div>
-                                                      <div class="d-flex justify-content-between">
-                                                            <div style="margin-left: 10px;">
-                                                                 Fan Off
-                                                            </div>
-                                                      
-                                                            <div style="margin-right: 10px;">
-                                                                  10 Mins ago
-                                                            </div>
-                                                      
-                                                      </div>
-                                                  
-                                                   
-                                                </div>
-                                    </ons-carousel-item>
-
-                                    <ons-carousel-item style="background-image: url('img/weather.jpg')">
-                                         
-                                          <div style="text-align: center; font-size: 30px; margin-top: 20px; color: #fff; text-shadow: 1px 1px 2px black;">
-                                                <h3>Port Louis</h3>
-                                                <h1 style="font-size:50px;margin-left:15px;margin-top: -5px;">38&deg;</h1>
-                                                <p style="font-size:15px;margin-top: -15px;">Slighly rainy</p>
-                                                <img style="padding-top: -20px;" src="img/icons/rainy-1.svg">
-                                          </div>
-                                          <div class=".col-6 .col-md-4" style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 10px;">
-                                                <h3>Today</h3>
-                                          </div>
-                                          <hr style="color: #fff;">
-                                          <div class="container">
-                                                <div class="row d-flex justify-content-center">
-                                                      <div class=".col-4 " style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 20px;">
-                                                            <p style="margin-left: -8px;">4 am</p>
-                                                            <img style="margin-left: -20px;" src="img/icons/rainy-1.svg">
-                                                            <p>38&deg;</p>
-                                                      </div>
-                                                      <div class=".col-4 " style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 20px;">
-                                                            <p style="margin-left: -8px;">4 am</p>
-                                                            <img style="margin-left: -20px;" src="img/icons/rainy-1.svg">
-                                                            <p>38&deg;</p>
-                                                      </div>
-                                                      <div class=".col-4 " style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 20px;">
-                                                            <p style="margin-left: -8px;">4 am</p>
-                                                            <img style="margin-left: -20px;" src="img/icons/rainy-1.svg">
-                                                            <p>38&deg;</p>
-                                                      </div>
-                                                      <div class=".col-4 " style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 20px;">
-                                                            <p style="margin-left: -8px;">4 am</p>
-                                                            <img style="margin-left: -20px;" src="img/icons/rainy-1.svg">
-                                                            <p>38&deg;</p>
-                                                      </div>
-                                                      <div class=".col-4 " style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 20px;">
-                                                            <p style="margin-left: -8px;">4 am</p>
-                                                            <img style="margin-left: -20px;" src="img/icons/rainy-1.svg">
-                                                            <p>38&deg;</p>
-                                                      </div>
-                                                </div>
                                           </div>
 
-                                    </ons-carousel-item>
-
-                                    <ons-carousel-item style="background-image: url('img/water.jpg')">
+                                          <div class="d-flex justify-content-between">
+                                                <div style="margin-left: 10px;">
+                                                      <img src="img/arrow_down.png">
+                                                </div>
+                                                <div >
+                                                      Moisture
+                                                </div>
+                                                <div style="margin-right: 10px;">
+                                                      50%
+                                                </div>
                                           
-                                          <div style="text-align: center; font-size: 30px; margin-top: 20px; color: #fff; text-shadow: 1px 1px 2px black;">
-                                                <img style="padding-top: -20px;" width="50px" src="img/drop.svg">
+                                          
                                           </div>
-                                         
-                                                <div class=".col-6 .col-md-4" style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 10px;">
-                                                      <h3>Humidity</h3>
+
+                                          <div class="d-flex justify-content-between">
+                                                <div style="margin-left: 10px;">
+                                                      <img src="img/arrow_up.png">
                                                 </div>
-                                                <hr style="color: #fff;">
-                                                <div class="d-flex flex-column">
-                                                      <div class="d-flex justify-content-between">
-                                                            <div style="margin-left: 10px;">
-                                                                  <img src="img/arrow_up.png">
-                                                            </div>
-                                                            <div>
-                                                                  50%
-                                                            </div>
-                                                            <div class="col-4">
-                                                                  10 mins ago
-                                                            </div>
-                                                      </div>
-                                                      <div class="d-flex justify-content-between">
-                                                            <div style="margin-left: 10px;">
-                                                                  <img src="img/arrow_up.png">
-                                                            </div>
-                                                            <div>
-                                                                  50%
-                                                            </div>
-                                                            <div class="col-4">
-                                                                  10 mins ago
-                                                            </div>
-                                                      </div>
-                                                      <div class="d-flex justify-content-between">
-                                                            <div style="margin-left: 10px;">
-                                                                  <img src="img/arrow_up.png">
-                                                            </div>
-                                                            <div>
-                                                                  50%
-                                                            </div>
-                                                            <div class="col-4">
-                                                                  10 mins ago
-                                                            </div>
-                                                      </div>
+                                                <div >
+                                                      humidity
                                                 </div>
-                                                <div class=".col-6 .col-md-4" style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 10px;">
-                                                      <h3>Moisture</h3>
-                                                </div>
-                                                <hr style="color: #fff;">
-                                                <div class="d-flex flex-column">
-                                                      <div class="d-flex justify-content-between">
-                                                            <div style="margin-left: 10px;">
-                                                                  <img src="img/arrow_up.png">
-                                                            </div>
-                                                            <div>
-                                                                  50%
-                                                            </div>
-                                                            <div class="col-4">
-                                                                  10 mins ago
-                                                            </div>
-                                                      </div>
-                                                      <div class="d-flex justify-content-between">
-                                                            <div style="margin-left: 10px;">
-                                                                  <img src="img/arrow_up.png">
-                                                            </div>
-                                                            <div>
-                                                                  50%
-                                                            </div>
-                                                            <div class="col-4">
-                                                                  10 mins ago
-                                                            </div>
-                                                      </div>
-                                                      <div class="d-flex justify-content-between">
-                                                            <div style="margin-left: 10px;">
-                                                                  <img src="img/arrow_up.png">
-                                                            </div>
-                                                            <div>
-                                                                  50%
-                                                            </div>
-                                                            <div class="col-4">
-                                                                  10 mins ago
-                                                            </div>
-                                                      </div>
-                                                </div>
-    
-                                    </ons-carousel-item>
-                                    <ons-carousel-item style="background-image: url('img/Solution.png')">
-                                               
-                                                <div style="text-align: center; font-size: 30px; margin-top: 20px; color: #fff; text-shadow: 1px 1px 2px black;">
-                                                      <h3>Solution Level</h3>
-                                                      <img style="padding-top: -20px; margin-bottom: -20px; width: 50px;" src="img/bucket.svg">
-                                                      <h1 style="font-size:50px;margin-left:15px;margin-top: -5px;">50%</h1>
-                                                </div>
-                                               
-                                                <hr style="color: #fff;">
-                                                <div style="text-align: center; font-size: 30px; margin-top: 20px; color: #fff; text-shadow: 1px 1px 2px black;">
-                                                      <h3>PH Level</h3>
-                                                      <img style="padding-top: -20px; margin-bottom: -20px; width: 50px;" src="img/water.svg">
-                                                      <h1 style="font-size:38px;margin-left:15px;margin-top: -5px;">100pm</h1>
+                                                <div style="margin-right: 10px;">
+                                                      50%
                                                 </div>
 
-                                                <div class="d-flex flex-column">
-                                                      <div class="d-flex justify-content-between">
-                                                            <div style="margin-left: 10px;">
-                                                                  <img src="img/arrow_up.png">
-                                                            </div>
-                                                            <div>
-                                                                  50%
-                                                            </div>
-                                                            <div class="col-4">
-                                                                  10 mins ago
-                                                            </div>
-                                                      </div>
-                                                      <div class="d-flex justify-content-between">
-                                                            <div style="margin-left: 10px;">
-                                                                  <img src="img/arrow_up.png">
-                                                            </div>
-                                                            <div>
-                                                                  50%
-                                                            </div>
-                                                            <div class="col-4">
-                                                                  10 mins ago
-                                                            </div>
-                                                      </div>
-                                                      <div class="d-flex justify-content-between">
-                                                            <div style="margin-left: 10px;">
-                                                                  <img src="img/arrow_up.png">
-                                                            </div>
-                                                            <div>
-                                                                  50%
-                                                            </div>
-                                                            <div class="col-4">
-                                                                  10 mins ago
-                                                            </div>
-                                                      </div>
+                                          </div>
+
+                                          <div class="d-flex justify-content-between">
+                                                <div style="margin-left: 10px;">
+                                                      <img src="img/arrow_constant.png">
                                                 </div>
-                                               
-                                    </ons-carousel-item>
-                              </ons-carousel>
-                        </ons-page>
-                  </template>
+                                                <div >
+                                                      Water Level
+                                                </div>
+                                                <div style="margin-right: 10px;">
+                                                      50%
+                                                </div>
 
-                  <template id="orders.html">
-                        <ons-page>
-                              <ons-toolbar>
-                                    <div class="left">
-                                          <ons-toolbar-button onclick="fn.open()">
-                                                <ons-icon icon="md-menu"></ons-icon>
-                                          </ons-toolbar-button>
+                                          </div>
+                                          <div class="d-flex justify-content-between">
+                                                <div style="margin-left: 10px;">
+                                                      <img src="img/arrow_up.png">
+                                                </div>
+                                                <div >
+                                                      Solution Level
+                                                </div>
+                                                <div style="margin-right: 10px;">
+                                                      50%
+                                                </div>
+                                          
+                                          </div>
+                                          <div class="d-flex justify-content-between">
+                                                <div style="margin-left: 10px;">
+                                                      <img src="img/arrow_up.png">
+                                                </div>
+                                                <div>
+                                                      Light Level
+                                                </div>
+                                                <div style="margin-right: 10px;">
+                                                      10
+                                                </div>
+                                          
+                                          </div>
+                                          
+                                          
                                     </div>
-                                    <div class="center">
-                                          Orders
+                                    <div class=".col-6 .col-md-4" style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 10px;">
+                                          <h3>Recent Activity</h3>
                                     </div>
-                              </ons-toolbar>
-                        </ons-page>
-                  </template>
+                                    <hr style="color: #fff;">
+                                    <div class="d-flex flex-column">
+                                          <div class="d-flex justify-content-between">
+                                                <div style="margin-left: 10px;">
+                                                      Light On
+                                                </div>
 
-                  <template id="settings.html">
-                        <ons-page>
-                              <ons-toolbar>
-                                    <div class="left">
-                                          <ons-toolbar-button onclick="fn.open()">
-                                                <ons-icon icon="md-menu"></ons-icon>
-                                          </ons-toolbar-button>
+                                                <div style="margin-right: 10px;">
+                                                      10 Mins ago
+                                                </div>
+                                                
+                                          </div>
+                                          <div class="d-flex justify-content-between">
+                                                <div style="margin-left: 10px;">
+                                                      Water On
+                                                </div>
+                                          
+                                                <div style="margin-right: 10px;">
+                                                      10 Mins ago
+                                                </div>
+                                          
+                                          </div>
+                                          <div class="d-flex justify-content-between">
+                                                <div style="margin-left: 10px;">
+                                                      Fan Off
+                                                </div>
+                                          
+                                                <div style="margin-right: 10px;">
+                                                      10 Mins ago
+                                                </div>
+                                          
+                                          </div>
+                                          
+                                          
                                     </div>
-                                    <div class="center">
-                                          Settings
+                        </ons-carousel-item>
+
+                        <ons-carousel-item style="background-image: url('img/weather.jpg')">
+                              
+                              <div style="text-align: center; font-size: 30px; margin-top: 20px; color: #fff; text-shadow: 1px 1px 2px black;">
+                                    <h3>Port Louis</h3>
+                                    <h1 style="font-size:50px;margin-left:15px;margin-top: -5px;">38&deg;</h1>
+                                    <p style="font-size:15px;margin-top: -15px;">Slighly rainy</p>
+                                    <img style="padding-top: -20px;" src="img/icons/rainy-1.svg">
+                              </div>
+                              <div class=".col-6 .col-md-4" style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 10px;">
+                                    <h3>Today</h3>
+                              </div>
+                              <hr style="color: #fff;">
+                              <div class="container">
+                                    <div class="row d-flex justify-content-center">
+                                          <div class=".col-4 " style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 20px;">
+                                                <p style="margin-left: -8px;">4 am</p>
+                                                <img style="margin-left: -20px;" src="img/icons/rainy-1.svg">
+                                                <p>38&deg;</p>
+                                          </div>
+                                          <div class=".col-4 " style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 20px;">
+                                                <p style="margin-left: -8px;">4 am</p>
+                                                <img style="margin-left: -20px;" src="img/icons/rainy-1.svg">
+                                                <p>38&deg;</p>
+                                          </div>
+                                          <div class=".col-4 " style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 20px;">
+                                                <p style="margin-left: -8px;">4 am</p>
+                                                <img style="margin-left: -20px;" src="img/icons/rainy-1.svg">
+                                                <p>38&deg;</p>
+                                          </div>
+                                          <div class=".col-4 " style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 20px;">
+                                                <p style="margin-left: -8px;">4 am</p>
+                                                <img style="margin-left: -20px;" src="img/icons/rainy-1.svg">
+                                                <p>38&deg;</p>
+                                          </div>
+                                          <div class=".col-4 " style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 20px;">
+                                                <p style="margin-left: -8px;">4 am</p>
+                                                <img style="margin-left: -20px;" src="img/icons/rainy-1.svg">
+                                                <p>38&deg;</p>
+                                          </div>
                                     </div>
-                              </ons-toolbar>
-                        </ons-page>
-                  </template>
-                  <template id="about.html">
-                        <ons-page>
-                              <ons-toolbar>
-                                    <div class="left">
-                                          <ons-toolbar-button onclick="fn.open()">
-                                                <ons-icon icon="md-menu"></ons-icon>
-                                          </ons-toolbar-button>
+                              </div>
+
+                        </ons-carousel-item>
+
+                        <ons-carousel-item style="background-image: url('img/water.jpg')">
+                              
+                              <div style="text-align: center; font-size: 30px; margin-top: 20px; color: #fff; text-shadow: 1px 1px 2px black;">
+                                    <img style="padding-top: -20px;" width="50px" src="img/drop.svg">
+                              </div>
+                              
+                                    <div class=".col-6 .col-md-4" style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 10px;">
+                                          <h3>Humidity</h3>
                                     </div>
-                                    <div class="center">
-                                          About
+                                    <hr style="color: #fff;">
+                                    <div class="d-flex flex-column">
+                                          <div class="d-flex justify-content-between">
+                                                <div style="margin-left: 10px;">
+                                                      <img src="img/arrow_up.png">
+                                                </div>
+                                                <div>
+                                                      50%
+                                                </div>
+                                                <div class="col-4">
+                                                      10 mins ago
+                                                </div>
+                                          </div>
+                                          <div class="d-flex justify-content-between">
+                                                <div style="margin-left: 10px;">
+                                                      <img src="img/arrow_up.png">
+                                                </div>
+                                                <div>
+                                                      50%
+                                                </div>
+                                                <div class="col-4">
+                                                      10 mins ago
+                                                </div>
+                                          </div>
+                                          <div class="d-flex justify-content-between">
+                                                <div style="margin-left: 10px;">
+                                                      <img src="img/arrow_up.png">
+                                                </div>
+                                                <div>
+                                                      50%
+                                                </div>
+                                                <div class="col-4">
+                                                      10 mins ago
+                                                </div>
+                                          </div>
                                     </div>
-                              </ons-toolbar>
-                        </ons-page>
-                  </template>
+                                    <div class=".col-6 .col-md-4" style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 10px;">
+                                          <h3>Moisture</h3>
+                                    </div>
+                                    <hr style="color: #fff;">
+                                    <div class="d-flex flex-column">
+                                          <div class="d-flex justify-content-between">
+                                                <div style="margin-left: 10px;">
+                                                      <img src="img/arrow_up.png">
+                                                </div>
+                                                <div>
+                                                      50%
+                                                </div>
+                                                <div class="col-4">
+                                                      10 mins ago
+                                                </div>
+                                          </div>
+                                          <div class="d-flex justify-content-between">
+                                                <div style="margin-left: 10px;">
+                                                      <img src="img/arrow_up.png">
+                                                </div>
+                                                <div>
+                                                      50%
+                                                </div>
+                                                <div class="col-4">
+                                                      10 mins ago
+                                                </div>
+                                          </div>
+                                          <div class="d-flex justify-content-between">
+                                                <div style="margin-left: 10px;">
+                                                      <img src="img/arrow_up.png">
+                                                </div>
+                                                <div>
+                                                      50%
+                                                </div>
+                                                <div class="col-4">
+                                                      10 mins ago
+                                                </div>
+                                          </div>
+                                    </div>
+
+                        </ons-carousel-item>
+
+                        <ons-carousel-item style="background-image: url('img/Solution.png')">
+                                    
+                                    <div style="text-align: center; font-size: 30px; margin-top: 20px; color: #fff; text-shadow: 1px 1px 2px black;">
+                                          <h3>Solution Level</h3>
+                                          <img style="padding-top: -20px; margin-bottom: -20px; width: 50px;" src="img/bucket.svg">
+                                          <h1 style="font-size:50px;margin-left:15px;margin-top: -5px;">50%</h1>
+                                    </div>
+                                    
+                                    <hr style="color: #fff;">
+                                    <div style="text-align: center; font-size: 30px; margin-top: 20px; color: #fff; text-shadow: 1px 1px 2px black;">
+                                          <h3>PH Level</h3>
+                                          <img style="padding-top: -20px; margin-bottom: -20px; width: 50px;" src="img/water.svg">
+                                          <h1 style="font-size:38px;margin-left:15px;margin-top: -5px;">100pm</h1>
+                                    </div>
+
+                                    <div class="d-flex flex-column">
+                                          <div class="d-flex justify-content-between">
+                                                <div style="margin-left: 10px;">
+                                                      <img src="img/arrow_up.png">
+                                                </div>
+                                                <div>
+                                                      50%
+                                                </div>
+                                                <div class="col-4">
+                                                      10 mins ago
+                                                </div>
+                                          </div>
+                                          <div class="d-flex justify-content-between">
+                                                <div style="margin-left: 10px;">
+                                                      <img src="img/arrow_up.png">
+                                                </div>
+                                                <div>
+                                                      50%
+                                                </div>
+                                                <div class="col-4">
+                                                      10 mins ago
+                                                </div>
+                                          </div>
+                                          <div class="d-flex justify-content-between">
+                                                <div style="margin-left: 10px;">
+                                                      <img src="img/arrow_up.png">
+                                                </div>
+                                                <div>
+                                                      50%
+                                                </div>
+                                                <div class="col-4">
+                                                      10 mins ago
+                                                </div>
+                                          </div>
+                                    </div>
+                                    
+                        </ons-carousel-item>
+                  </ons-carousel>
             </ons-page>
+      </template>
+
+      <template id="orders.html">
+            <ons-page>
+                  <ons-toolbar>
+                        <div class="left">
+                              <ons-toolbar-button onclick="fn.open()">
+                                    <ons-icon icon="md-menu"></ons-icon>
+                              </ons-toolbar-button>
+                        </div>
+                        <div class="center">
+                              Orders
+                        </div>
+                  </ons-toolbar>
+                  
+            </ons-page>
+      </template>
+
+      <template id="chat.html">
+            <ons-page>
+                  <ons-toolbar>
+                        <div class="left">
+                              <ons-toolbar-button onclick="fn.open()">
+                                    <ons-icon icon="md-menu"></ons-icon>
+                              </ons-toolbar-button>
+                        </div>
+                        <div class="center">
+                              Chats
+                        </div>
+                  </ons-toolbar>
+                                                <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
+                                                      Whoops! Under construction!
+                                                </p>
+            </ons-page>
+      </template>
+      <template id="forum.html">
+            <ons-page>
+                  <ons-toolbar>
+                        <div class="left">
+                              <ons-toolbar-button onclick="fn.open()">
+                                    <ons-icon icon="md-menu"></ons-icon>
+                              </ons-toolbar-button>
+                        </div>
+                        <div class="center">
+                              Forum
+                        </div>
+                  </ons-toolbar>
+                                          <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
+                                                Whoops! Under construction!
+                                          </p>
+            </ons-page>
+      </template>
+
+      <template id="warnings.html">
+            <ons-page>
+                  <ons-toolbar>
+                        <div class="left">
+                              <ons-toolbar-button onclick="fn.open()">
+                                    <ons-icon icon="md-menu"></ons-icon>
+                              </ons-toolbar-button>
+                        </div>
+                        <div class="center">
+                              Warnings
+                        </div>
+                  </ons-toolbar>
+            </ons-page>
+      </template>
+      <template id="settings.html">
+            <ons-page>
+                  <ons-toolbar>
+                        <div class="left">
+                              <ons-toolbar-button onclick="fn.open()">
+                                    <ons-icon icon="md-menu"></ons-icon>
+                              </ons-toolbar-button>
+                        </div>
+                        <div class="center">
+                              Settings
+                        </div>
+                  </ons-toolbar>
+            </ons-page>
+      </template>
+      <template id="about.html">
+            <ons-page>
+                  <ons-toolbar>
+                        <div class="left">
+                              <ons-toolbar-button onclick="fn.open()">
+                                    <ons-icon icon="md-menu"></ons-icon>
+                              </ons-toolbar-button>
+                        </div>
+                        <div class="center">
+                              About
+                        </div>
+                  </ons-toolbar>
+            </ons-page>
+      </template>
+      </ons-page>
       </template>
       <!--script type="text/javascript" src="cordova.js"></script-->
       <script type="text/javascript" src="js/index.js"></script>
