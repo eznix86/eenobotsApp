@@ -17,7 +17,8 @@
             ons.platform.select('android');
       </script>
       <script src="js/jquery.min.js"></script>
-      <title>Hello World</title>
+
+      <title>eenobots</title>
 </head>
 
 <body>
@@ -258,7 +259,7 @@
                   </ons-list>
             </ons-page>
       </template>
-      
+
       <!--ordering details-->
       <template id="order-details.html">
             <ons-page id="order-details">
@@ -941,7 +942,7 @@
                                                 <span class="list-item__subtitle">SmithDoe@gmail.com</span>
                                                 <span class="list-item__subtitle">
                                                       <ons-button class="logout-button" modifier="quiet">Log out</ons-button>
-                                                      <ons-button modifier="" onclick="fn.load('settings.html')">Edit</ons-button>
+                                                      <!-- <ons-button modifier="" onclick="fn.load('settings.html')">Edit</ons-button> -->
                                                 </span>
                                           </ons-list-item>
                                           <ons-list-item onclick="fn.load('home.html')" tappable>
@@ -993,7 +994,7 @@
                   <div class=" bounce"><img src="img/swipe.svg"></div>
                   <ons-carousel fullscreen direction="horizontal" swipeable auto-scroll overscrollable id="carousel">
                         <ons-carousel-item style="background-image: url('img/activity.jpg')">
-                              
+
                                     <div class=".col-6 .col-md-4" style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 10px;">
                                           <h3>Realtime Monitoring</h3>
                                     </div>
@@ -1001,12 +1002,12 @@
                                     <div class="d-flex flex-column">
                                           <div class="d-flex justify-content-between">
                                                 <div style="margin-left: 10px;">
-                                                      <img src="img/arrow_up.png">
+                                                      <img id='temperature-state' src="img/arrow_up.png">
                                                 </div>
                                                 <div >
                                                       Temperature
                                                 </div>
-                                                <div style="margin-right: 10px;">
+                                                <div style="margin-right: 10px;" id='temperature-info'>
                                                       35&deg;C
                                                 </div>
 
@@ -1014,26 +1015,26 @@
 
                                           <div class="d-flex justify-content-between">
                                                 <div style="margin-left: 10px;">
-                                                      <img src="img/arrow_down.png">
+                                                      <img id='moisture-state' src="img/arrow_down.png">
                                                 </div>
                                                 <div >
                                                       Moisture
                                                 </div>
-                                                <div style="margin-right: 10px;">
+                                                <div style="margin-right: 10px;" id='moisture-info'>
                                                       50%
                                                 </div>
-                                          
-                                          
+
+
                                           </div>
 
                                           <div class="d-flex justify-content-between">
                                                 <div style="margin-left: 10px;">
-                                                      <img src="img/arrow_up.png">
+                                                      <img id='humidity-state' src="img/arrow_up.png">
                                                 </div>
                                                 <div >
                                                       humidity
                                                 </div>
-                                                <div style="margin-right: 10px;">
+                                                <div style="margin-right: 10px;" id='humidity-info'>
                                                       50%
                                                 </div>
 
@@ -1041,42 +1042,42 @@
 
                                           <div class="d-flex justify-content-between">
                                                 <div style="margin-left: 10px;">
-                                                      <img src="img/arrow_constant.png">
+                                                      <img id='water-state' src="img/arrow_constant.png">
                                                 </div>
                                                 <div >
                                                       Water Level
                                                 </div>
-                                                <div style="margin-right: 10px;">
+                                                <div style="margin-right: 10px;" id='water-info'>
                                                       50%
                                                 </div>
 
                                           </div>
                                           <div class="d-flex justify-content-between">
                                                 <div style="margin-left: 10px;">
-                                                      <img src="img/arrow_up.png">
+                                                      <img id='solution-state' src="img/arrow_up.png">
                                                 </div>
                                                 <div >
                                                       Solution Level
                                                 </div>
-                                                <div style="margin-right: 10px;">
+                                                <div style="margin-right: 10px;" id='solution-info'>
                                                       50%
                                                 </div>
-                                          
+
                                           </div>
                                           <div class="d-flex justify-content-between">
                                                 <div style="margin-left: 10px;">
-                                                      <img src="img/arrow_up.png">
+                                                      <img id='light-state' src="img/arrow_up.png">
                                                 </div>
                                                 <div>
                                                       Light Level
                                                 </div>
-                                                <div style="margin-right: 10px;">
-                                                      10
+                                                <div style="margin-right: 10px;" id='light-info'>
+                                                      10 lux
                                                 </div>
-                                          
+
                                           </div>
-                                          
-                                          
+
+
                                     </div>
                                     <div class=".col-6 .col-md-4" style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 10px;">
                                           <h3>Recent Activity</h3>
@@ -1091,35 +1092,35 @@
                                                 <div style="margin-right: 10px;">
                                                       10 Mins ago
                                                 </div>
-                                                
+
                                           </div>
                                           <div class="d-flex justify-content-between">
                                                 <div style="margin-left: 10px;">
                                                       Water On
                                                 </div>
-                                          
+
                                                 <div style="margin-right: 10px;">
                                                       10 Mins ago
                                                 </div>
-                                          
+
                                           </div>
                                           <div class="d-flex justify-content-between">
                                                 <div style="margin-left: 10px;">
                                                       Fan Off
                                                 </div>
-                                          
+
                                                 <div style="margin-right: 10px;">
                                                       10 Mins ago
                                                 </div>
-                                          
+
                                           </div>
-                                          
-                                          
+
+
                                     </div>
                         </ons-carousel-item>
 
                         <ons-carousel-item style="background-image: url('img/weather.jpg')">
-                              
+
                               <div style="text-align: center; font-size: 30px; margin-top: 20px; color: #fff; text-shadow: 1px 1px 2px black;">
                                     <h3>Port Louis</h3>
                                     <h1 style="font-size:50px;margin-left:15px;margin-top: -5px;">38&deg;</h1>
@@ -1163,11 +1164,11 @@
                         </ons-carousel-item>
 
                         <ons-carousel-item style="background-image: url('img/water.jpg')">
-                              
+
                               <div style="text-align: center; font-size: 30px; margin-top: 20px; color: #fff; text-shadow: 1px 1px 2px black;">
                                     <img style="padding-top: -20px;" width="50px" src="img/drop.svg">
                               </div>
-                              
+
                                     <div class=".col-6 .col-md-4" style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 10px;">
                                           <h3>Humidity</h3>
                                     </div>
@@ -1250,13 +1251,13 @@
                         </ons-carousel-item>
 
                         <ons-carousel-item style="background-image: url('img/Solution.png')">
-                                    
+
                                     <div style="text-align: center; font-size: 30px; margin-top: 20px; color: #fff; text-shadow: 1px 1px 2px black;">
                                           <h3>Solution Level</h3>
                                           <img style="padding-top: -20px; margin-bottom: -20px; width: 50px;" src="img/bucket.svg">
                                           <h1 style="font-size:50px;margin-left:15px;margin-top: -5px;">50%</h1>
                                     </div>
-                                    
+
                                     <hr style="color: #fff;">
                                     <div style="text-align: center; font-size: 30px; margin-top: 20px; color: #fff; text-shadow: 1px 1px 2px black;">
                                           <h3>PH Level</h3>
@@ -1299,7 +1300,7 @@
                                                 </div>
                                           </div>
                                     </div>
-                                    
+
                         </ons-carousel-item>
                   </ons-carousel>
             </ons-page>
@@ -1322,7 +1323,7 @@
 
                                     <ons-list-item modifier="chevron" tappable>
                                           <div class="left">
-                                               
+
                                                 <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
                                           </div>
                                           <div class="center">
@@ -1332,7 +1333,7 @@
                                     </ons-list-item>
                                     <ons-list-item modifier="chevron" tappable>
                                           <div class="left">
-                                                
+
                                                 <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
                                           </div>
                                           <div class="center">
@@ -1342,7 +1343,7 @@
                                     </ons-list-item>
                                     <ons-list-item modifier="chevron" tappable>
                                           <div class="left">
-                                                
+
                                                 <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
                                           </div>
                                           <div class="center">
@@ -1354,7 +1355,7 @@
                                     <ons-list-item modifier="chevron" tappable>
                                           <div class="left">
                                                 <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
-                                 
+
                                           </div>
                                           <div class="center">
                                                 <span class="list-item__title">1 Product</span>
@@ -1612,16 +1613,18 @@
                   </ons-toolbar>
             </ons-page>
       </template>
-      </ons-page>
-      </template>
       <!--script type="text/javascript" src="cordova.js"></script-->
       <script type="text/javascript" src="js/index.js"></script>
-      <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-            crossorigin="anonymous"></script>
+      <!-- <script src="js/jquery-3.3.1.slim.min.js"></script> -->
+      <script type="text/javascript"  src='js/data.js'></script>
+      <!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" -->
+            <!-- crossorigin="anonymous"></script> -->
+
       <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
             crossorigin="anonymous"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
             crossorigin="anonymous"></script>
+
 </body>
 
 </html>
