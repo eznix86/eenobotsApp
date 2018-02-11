@@ -965,7 +965,7 @@
                                                 <ons-icon style="margin-right: 10px;" icon="md-star"></ons-icon>
                                                 Forum
                                           </ons-list-item>
-                                          <ons-list-item onclick="fn.load('settings.html')" tappable>
+                                          <ons-list-item onclick="fn.load('settings.html')" id="settings-init" tappable>
                                                 <ons-icon style="margin-right: 10px;" icon="md-settings"></ons-icon>
                                                 Settings
                                           </ons-list-item>
@@ -1173,7 +1173,7 @@
                                           <h3>Humidity</h3>
                                     </div>
                                     <hr style="color: #fff;">
-                                    <div class="d-flex flex-column">
+                                    <div id='humidity-data' class="d-flex flex-column">
                                           <div class="d-flex justify-content-between">
                                                 <div style="margin-left: 10px;">
                                                       <img src="img/arrow_up.png">
@@ -1212,7 +1212,7 @@
                                           <h3>Moisture</h3>
                                     </div>
                                     <hr style="color: #fff;">
-                                    <div class="d-flex flex-column">
+                                    <div id='moisture-data' class="d-flex flex-column">
                                           <div class="d-flex justify-content-between">
                                                 <div style="margin-left: 10px;">
                                                       <img src="img/arrow_up.png">
@@ -1265,7 +1265,7 @@
                                           <h1 style="font-size:38px;margin-left:15px;margin-top: -5px;">100pm</h1>
                                     </div>
 
-                                    <div class="d-flex flex-column">
+                                    <div id='ph-data' class="d-flex flex-column">
                                           <div class="d-flex justify-content-between">
                                                 <div style="margin-left: 10px;">
                                                       <img src="img/arrow_up.png">
@@ -1616,7 +1616,9 @@
       <!--script type="text/javascript" src="cordova.js"></script-->
       <script type="text/javascript" src="js/index.js"></script>
       <!-- <script src="js/jquery-3.3.1.slim.min.js"></script> -->
+      <script type="text/javascript"  src='js/moment.js'></script>
       <script type="text/javascript"  src='js/data.js'></script>
+
       <!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" -->
             <!-- crossorigin="anonymous"></script> -->
 
