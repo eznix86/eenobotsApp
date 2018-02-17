@@ -993,8 +993,11 @@
                   </ons-toolbar>
                   <div class=" bounce"><img src="img/swipe.svg"></div>
                   <ons-carousel fullscreen direction="horizontal" swipeable auto-scroll overscrollable id="carousel">
-                        <ons-carousel-item style="background-image: url('img/activity.jpg')">
-
+                        <ons-carousel-item class='data-display' style="background-image: url('img/activity.jpg')">
+                                  <div>
+                                    <img class="col-md-6 loading-icon" width="42" src='img/load.gif'/>
+                                    
+                                  </div>
                                     <div class=".col-6 .col-md-4" style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 10px;">
                                           <h3>Realtime Monitoring</h3>
                                     </div>
@@ -1119,13 +1122,13 @@
                                     </div>
                         </ons-carousel-item>
 
-                        <ons-carousel-item style="background-image: url('img/weather.jpg')">
+                        <ons-carousel-item class='temperature-page' style="background-image: url('img/weather.jpg')">
 
                               <div style="text-align: center; font-size: 30px; margin-top: 20px; color: #fff; text-shadow: 1px 1px 2px black;">
-                                    <h3>Port Louis</h3>
-                                    <h1 style="font-size:50px;margin-left:15px;margin-top: -5px;">38&deg;</h1>
-                                    <p style="font-size:15px;margin-top: -15px;">Slighly rainy</p>
-                                    <img style="padding-top: -20px;" src="img/icons/rainy-1.svg">
+                                    <h3 id='position-name'>Port Louis</h3>
+                                    <h1 id='current-temperature' style="font-size:50px;margin-left:15px;margin-top: -5px;">38&deg;</h1>
+                                    <p id='weather-description' style="font-size:15px;margin-top: -15px;">Slighly rainy</p>
+                                    <img id='current-weather' style="padding-top: -20px;" src="img/icons/rainy-1.svg">
                               </div>
                               <div class=".col-6 .col-md-4" style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 10px;">
                                     <h3>Today</h3>
@@ -1134,28 +1137,28 @@
                               <div class="container">
                                     <div class="row d-flex justify-content-center">
                                           <div class=".col-4 " style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 20px;">
-                                                <p style="margin-left: -8px;">4 am</p>
-                                                <img style="margin-left: -20px;" src="img/icons/rainy-1.svg">
+                                                <p id='today-time-one' style="margin-left: -8px;">4 am</p>
+                                                <img id='today-weather-one' style="margin-left: -20px;" src="img/icons/rainy-1.svg">
                                                 <p>38&deg;</p>
                                           </div>
                                           <div class=".col-4 " style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 20px;">
-                                                <p style="margin-left: -8px;">4 am</p>
-                                                <img style="margin-left: -20px;" src="img/icons/rainy-1.svg">
+                                                <p id='today-time-two'  style="margin-left: -8px;">4 am</p>
+                                                <img id='today-weather-two' style="margin-left: -20px;" src="img/icons/rainy-1.svg">
                                                 <p>38&deg;</p>
                                           </div>
                                           <div class=".col-4 " style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 20px;">
-                                                <p style="margin-left: -8px;">4 am</p>
-                                                <img style="margin-left: -20px;" src="img/icons/rainy-1.svg">
+                                                <p id='today-time-three'  style="margin-left: -8px;">4 am</p>
+                                                <img id='today-weather-three'style="margin-left: -20px;" src="img/icons/rainy-1.svg">
                                                 <p>38&deg;</p>
                                           </div>
                                           <div class=".col-4 " style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 20px;">
-                                                <p style="margin-left: -8px;">4 am</p>
-                                                <img style="margin-left: -20px;" src="img/icons/rainy-1.svg">
+                                                <p id='today-time-four'  style="margin-left: -8px;">4 am</p>
+                                                <img id='today-weather-four' style="margin-left: -20px;" src="img/icons/rainy-1.svg">
                                                 <p>38&deg;</p>
                                           </div>
                                           <div class=".col-4 " style="color: #fff; text-shadow: 1px 1px 2px black; margin-left: 20px;">
-                                                <p style="margin-left: -8px;">4 am</p>
-                                                <img style="margin-left: -20px;" src="img/icons/rainy-1.svg">
+                                                <p id='today-time-five'  style="margin-left: -8px;">4 am</p>
+                                                <img id='today-weather-five' style="margin-left: -20px;" src="img/icons/rainy-1.svg">
                                                 <p>38&deg;</p>
                                           </div>
                                     </div>
@@ -1255,14 +1258,14 @@
                                     <div style="text-align: center; font-size: 30px; margin-top: 20px; color: #fff; text-shadow: 1px 1px 2px black;">
                                           <h3>Solution Level</h3>
                                           <img style="padding-top: -20px; margin-bottom: -20px; width: 50px;" src="img/bucket.svg">
-                                          <h1 style="font-size:50px;margin-left:15px;margin-top: -5px;">50%</h1>
+                                          <h1 id='solution-value'style="font-size:50px;margin-left:15px;margin-top: -5px;">50%</h1>
                                     </div>
 
                                     <hr style="color: #fff;">
                                     <div style="text-align: center; font-size: 30px; margin-top: 20px; color: #fff; text-shadow: 1px 1px 2px black;">
                                           <h3>PH Level</h3>
                                           <img style="padding-top: -20px; margin-bottom: -20px; width: 50px;" src="img/water.svg">
-                                          <h1 style="font-size:38px;margin-left:15px;margin-top: -5px;">100pm</h1>
+                                          <h1 id='ph-value' style="font-size:38px;margin-left:15px;margin-top: -5px;">100pm</h1>
                                     </div>
 
                                     <div id='ph-data' class="d-flex flex-column">

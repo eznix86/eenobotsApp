@@ -1,6 +1,7 @@
 
 
 ons.ready(function() {
+
   previous_data = [];
   var carousel = document.addEventListener('postchange', function(event) {
     console.log('Changed to ' + event.activeIndex)
@@ -48,9 +49,39 @@ ons.ready(function() {
              display.children().first().remove();
              createLine(display, data);
            }
-
+           console.log("here: "+event.activeIndex)
            switch (event.activeIndex) {
              case 1:
+              $.getJSON('http://api.wunderground.com/api/36051e280c8d8ec2/hourly/q/-20.3147,57.5203.json')
+                .then(function(weather){
+                  console.log(weather);
+                  console.log(weather.hourly_forecast[0].FCTTIME.civil);
+
+                  console.log(weather.hourly_forecast[0].icon);
+                  console.log(weather.hourly_forecast[0].condition)
+                  $('#weather-description').html(weather.hourly_forecast[0].condition);
+                  $('#current-weather').attr("src", "img/icons/"+weather.hourly_forecast[0].icon+".svg");
+                  console.log(weather.hourly_forecast[0].temp.metric);
+                  $('#today-time-one').html(weather.hourly_forecast[0].FCTTIME.civil);
+                  $('#today-weather-one').attr("src", "img/icons/"+weather.hourly_forecast[0].icon+".svg");
+                  $('#today-time-two').html(weather.hourly_forecast[1].FCTTIME.civil);
+                  $('#today-weather-two').attr("src", "img/icons/"+weather.hourly_forecast[1].icon+".svg");
+                  $('#today-time-three').html(weather.hourly_forecast[2].FCTTIME.civil);
+                  $('#today-weather-three').attr("src", "img/icons/"+weather.hourly_forecast[2].icon+".svg");
+                  $('#today-time-four').html(weather.hourly_forecast[3].FCTTIME.civil);
+                  $('#today-weather-four').attr("src", "img/icons/"+weather.hourly_forecast[3].icon+".svg");
+                  $('#today-time-five').html(weather.hourly_forecast[4].FCTTIME.civil);
+                  $('#today-weather-five').attr("src", "img/icons/"+weather.hourly_forecast[4].icon+".svg");
+                });
+              $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?latlng=-20.3147,57.5203&sensor=true/false')
+                .then(function(position){
+                  console.log(position.results[0].address_components[1].long_name);
+                  console.log(data[0].temperature);
+                  $('#position-name').html(position.results[0].address_components[1].long_name);
+                  $('#current-temperature').html(data[0].temperature+"&deg;");
+
+
+                });
 
              break;
              case 2:
@@ -72,12 +103,18 @@ ons.ready(function() {
                 createLine($('#ph-data'),previous_data, data, 'ph');
                }else
                 maintain($('#ph-data'),previous_data, data, 'ph');
+                $('#solution-value').html(data[0].solution+"%");
+                $('#ph-value').html(data[0].ph+"%");
+
+
              break;
 
 
            }
+           clearInterval(refreshInterval);
 
          }
+
        )
     }, 5000);
 
@@ -85,12 +122,23 @@ ons.ready(function() {
   });
 
 
+  let loaded = false;
+
 
   let refreshInterval =  setInterval(()=>{
+
+      if (!loaded)
+        loaded = true;
     $.ajax({
      type: 'POST',
      url: 'http://localhost/Projects/php/data.php',
      success: function(data){
+
+       if (loaded){
+         $('.loading-icon').hide("slow");
+
+       }
+
        monitor(data);
        check_changes(previous_data, data);
        previous_data = data
